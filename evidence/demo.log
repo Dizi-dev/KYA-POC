@@ -11,8 +11,12 @@ Request                                          HTTP  gateway result
  7. Unknown agent, directory offline (try 2)       200  outcome=unverified decision=allow
  7. Unknown agent, directory offline (try 3)       429  outcome=unverified decision=rate_limit
  8. Human with a normal browser                    200  outcome=unsigned   decision=allow
+ 9. Acme rotates: request signed with NEW key      200  outcome=verified   decision=allow
+ 9. Acme rotates: OLD key still published          200  outcome=verified   decision=allow
+ 9. OLD key after Acme removed it (cache expired)  429  outcome=unverified decision=rate_limit
+    (unverified -> falls to the unverified rate limit, already used by this client in 7)
 
-Audit chain: 10 entries, chain intact
+Audit chain: 13 entries, chain intact
 After editing entry 5 in the database: chain broken at entry 5
 Dashboard snapshot written to dashboard_snapshot.html
 

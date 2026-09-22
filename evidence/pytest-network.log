@@ -1,4 +1,14 @@
 ...s.                                                                    [100%]
+=============================== warnings summary ===============================
+tests/test_defects.py:11
+  /Users/nemanjavujic/Desktop/KYA/kya-gateway/tests/test_defects.py:11: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient
+
+.venv/lib/python3.14/site-packages/starlette/testclient.py:53
+  /Users/nemanjavujic/Desktop/KYA/kya-gateway/.venv/lib/python3.14/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 =========================== short test summary info ============================
 SKIPPED [1] tests/test_interop.py:116: directory only publishes the RFC 9421 test key, which production mode rejects
-4 passed, 1 skipped, 19 deselected in 1.24s
+4 passed, 1 skipped, 66 deselected, 2 warnings in 1.48s

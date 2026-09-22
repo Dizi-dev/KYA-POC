@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "failures": [],
+  "steps": [
+    {
+      "id": "human",
+      "label": "A person with Firefox",
+      "status": 200,
+      "outcome": "unsigned",
+      "decision": "allow",
+      "reason": null
+    },
+    {
+      "id": "fake-gptbot-ua",
+      "label": "Scraper claims to be GPTBot in User-Agent only",
+      "status": 403,
+      "outcome": "unsigned",
+      "decision": "block",
+      "reason": "no signature headers"
+    },
+    {
+      "id": "forged-chatgpt",
+      "label": "Attacker signs as ChatGPT (real ChatGPT keyid, wrong key)",
+      "status": 403,
+      "outcome": "invalid",
+      "decision": "block",
+      "reason": "signature does not match"
+    },
+    {
+      "id": "unknown-key-at-chatgpt-1",
+      "label": "Unknown key pointing at chatgpt.com directory (try 1)",
+      "status": 200,
+      "outcome": "unverified",
+      "decision": "allow",
+      "reason": null
+    },
+    {
+      "id": "unknown-key-at-chatgpt-2",
+      "label": "Unknown key pointing at chatgpt.com directory (try 2)",
+      "status": 200,
+      "outcome": "unverified",
+      "decision": "allow",
+      "reason": null
+    },
+    {
+      "id": "unknown-key-at-chatgpt-3-rotated",
+      "label": "Unknown key pointing at chatgpt.com directory (try 3)",
+      "status": 429,
+      "outcome": "unverified",
+      "decision": "rate_limit",
+      "reason": "keyid not published in the agent's directory"
+    },
+    {
+      "id": "forged-google-agent",
+      "label": "Attacker signs as Google-Agent (real Google keyid)",
+      "status": 403,
+      "outcome": "invalid",
+      "decision": "block",
+      "reason": "signature does not match"
+    }
+  ],
+  "admin": [
+    401,
+    401,
+    200
+  ],
+  "chain": {
+    "intact": true,
+    "detail": "7 entries, chain intact"
+  }
+}

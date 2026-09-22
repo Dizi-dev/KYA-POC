@@ -20,5 +20,30 @@ https://skyfire.xyz                                                   403    - -
 https://visa.com                                                      301    - -
 https://www.visa.com  (redirect target)                               404    - -
 https://http-message-signatures-example.research.cloudflare.com       200    1 ok
+https://agent.bot.goog                                                200    5 ok
+https://xhah6q48pbxb4.keydirectory.signer.us-east-1.on.aws            200    1 ok
+https://c3drvlj8gw240.keydirectory.signer.eu-west-1.on.aws            200    1 ok
+https://api.anchorbrowser.io                                          200    1 ok
+https://www.kernel.sh                                                 200    1 ok
+https://api.manus.im                                                  200    1 ok
+https://api.apify.com                                                 200    1 ok
+https://api.link.com                                                  200    1 ok
+https://nekuda-agent-registry.onrender.com                            200    2 ok
+https://www.meta.com                                                  200    3 ok
+https://assistbot.duckduckgo.com                                      200    1 ok
+https://you.com                                                       200    1 ok
+https://www.klaviyo.com                                               200    1 ok
+https://rye.xyz                                                       200    1 ok
+https://signatures.cardsavr.io                                        200    2 ok
+https://payroll-bot.adp.com                                           200    1 ok
+https://www.browserless.io                                            200    0 ok
+https://www.shopify.com                                               200    0 ok
+https://steel.dev                                                     404    - -
+https://hyperbrowser.ai                                               307    - -
+https://www.hyperbrowser.ai  (redirect target)                        404    - -
+https://stripe.com                                                    404    - -
+https://coinbase.com                                                  302    - -
+https://www.coinbase.com  (redirect target)                           404    - -
 
+21 of 45 directories load under production rules; 28 usable Ed25519 keys
 written to evidence/directory_survey.json

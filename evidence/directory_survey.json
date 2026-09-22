@@ -2,7 +2,8 @@
   {
     "origin": "https://chatgpt.com",
     "url": "https://chatgpt.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:16.954756+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:48.570418+00:00",
     "status": 200,
     "content_type": "application/http-message-signatures-directory+json",
     "cache_control": "no-store, no-transform",
@@ -17,7 +18,7 @@
         "is_rfc9421_test_key": false,
         "nbf": 1735689600,
         "nbf_unit": "seconds",
-        "exp": 1790685977,
+        "exp": 1790686788,
         "exp_unit": "seconds",
         "days_until_exp": 7.0
       }
@@ -31,7 +32,8 @@
   {
     "origin": "https://openai.com",
     "url": "https://openai.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:17.979772+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:49.337674+00:00",
     "status": 404,
     "content_type": "text/html; charset=utf-8",
     "cache_control": "public, max-age=0, must-revalidate"
@@ -39,7 +41,8 @@
   {
     "origin": "https://anthropic.com",
     "url": "https://anthropic.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:18.531853+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:50.126203+00:00",
     "status": 301,
     "content_type": "text/html; charset=UTF-8",
     "cache_control": ""
@@ -47,7 +50,8 @@
   {
     "origin": "https://www.anthropic.com",
     "url": "https://www.anthropic.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:18.653271+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:50.248753+00:00",
     "status": 404,
     "content_type": "text/html; charset=utf-8",
     "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate",
@@ -56,7 +60,8 @@
   {
     "origin": "https://claude.ai",
     "url": "https://claude.ai/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:18.939023+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:50.522224+00:00",
     "status": 404,
     "content_type": "text/plain; charset=UTF-8",
     "cache_control": "no-store"
@@ -64,7 +69,8 @@
   {
     "origin": "https://perplexity.ai",
     "url": "https://perplexity.ai/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:19.001835+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:50.578252+00:00",
     "status": 301,
     "content_type": "text/html",
     "cache_control": ""
@@ -72,7 +78,8 @@
   {
     "origin": "https://www.perplexity.ai:443",
     "url": "https://www.perplexity.ai:443/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:20.008197+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:51.247859+00:00",
     "status": 404,
     "content_type": "text/html; charset=UTF-8",
     "cache_control": "",
@@ -81,7 +88,8 @@
   {
     "origin": "https://google.com",
     "url": "https://google.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:20.184261+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:51.434113+00:00",
     "status": 404,
     "content_type": "text/html; charset=UTF-8",
     "cache_control": ""
@@ -89,7 +97,8 @@
   {
     "origin": "https://bing.com",
     "url": "https://bing.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:20.385481+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:51.680716+00:00",
     "status": 301,
     "content_type": "text/html; charset=utf-8",
     "cache_control": "private"
@@ -97,7 +106,8 @@
   {
     "origin": "https://amazon.com",
     "url": "https://amazon.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:20.654833+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:52.181286+00:00",
     "status": 301,
     "content_type": "text/html",
     "cache_control": ""
@@ -105,7 +115,8 @@
   {
     "origin": "https://www.amazon.com",
     "url": "https://www.amazon.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:21.427559+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:52.979758+00:00",
     "status": 404,
     "content_type": "text/html;charset=UTF-8",
     "cache_control": "no-cache",
@@ -114,7 +125,8 @@
   {
     "origin": "https://cloudflare.com",
     "url": "https://cloudflare.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:21.723873+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:53.223846+00:00",
     "status": 301,
     "content_type": "text/html; charset=UTF-8",
     "cache_control": ""
@@ -122,7 +134,8 @@
   {
     "origin": "https://www.cloudflare.com",
     "url": "https://www.cloudflare.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:21.817598+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:53.317773+00:00",
     "status": 301,
     "content_type": "",
     "cache_control": "",
@@ -131,7 +144,8 @@
   {
     "origin": "https://browserbase.com",
     "url": "https://browserbase.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:21.867277+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:53.368454+00:00",
     "status": 301,
     "content_type": "application/json",
     "cache_control": "public, max-age=0, must-revalidate"
@@ -139,7 +153,8 @@
   {
     "origin": "https://www.browserbase.com",
     "url": "https://www.browserbase.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:22.129210+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:53.620586+00:00",
     "status": 200,
     "content_type": "application/http-message-signatures-directory+json",
     "cache_control": "public, max-age=3600",
@@ -172,7 +187,8 @@
   {
     "origin": "https://browser-use.com",
     "url": "https://browser-use.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:22.385272+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:53.904548+00:00",
     "status": 404,
     "content_type": "text/html; charset=utf-8",
     "cache_control": "public, max-age=0, must-revalidate"
@@ -180,7 +196,8 @@
   {
     "origin": "https://manus.im",
     "url": "https://manus.im/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:22.574681+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:54.091099+00:00",
     "status": 404,
     "content_type": "text/html; charset=utf-8",
     "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate"
@@ -188,7 +205,8 @@
   {
     "origin": "https://skyfire.xyz",
     "url": "https://skyfire.xyz/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:22.819031+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:54.374656+00:00",
     "status": 403,
     "content_type": "text/html",
     "cache_control": ""
@@ -196,7 +214,8 @@
   {
     "origin": "https://visa.com",
     "url": "https://visa.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:23.277487+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:54.838651+00:00",
     "status": 301,
     "content_type": "text/html; charset=UTF-8",
     "cache_control": ""
@@ -204,7 +223,8 @@
   {
     "origin": "https://www.visa.com",
     "url": "https://www.visa.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:23.420689+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:54.978719+00:00",
     "status": 404,
     "content_type": "text/html",
     "cache_control": "",
@@ -213,7 +233,8 @@
   {
     "origin": "https://http-message-signatures-example.research.cloudflare.com",
     "url": "https://http-message-signatures-example.research.cloudflare.com/.well-known/http-message-signatures-directory",
-    "checked_at": "2026-09-22T12:46:23.640547+00:00",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:55.241300+00:00",
     "status": 200,
     "content_type": "application/http-message-signatures-directory+json",
     "cache_control": "",
@@ -235,5 +256,587 @@
     "gateway_can_load": true,
     "gateway_error": null,
     "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://agent.bot.goog",
+    "url": "https://agent.bot.goog/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:55.360441+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 5,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "mhxuPw",
+        "thumbprint": "_fmS_hfpckRfp1x7fDExtVKVaYtcu1WJX1Io5LIow24",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "cYSMkA",
+        "thumbprint": "cBovpyiY9PIQIFEfaw7w_0Wwwwx4UF2LY6w0lQURHBU",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "bUCe2A",
+        "thumbprint": "I10hzgxlf59i39kdp5Lib4Tfbg-FO4ZMwmAEDwG88bY",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "DYiMjA",
+        "thumbprint": "ImfgehCo9CQ0CTvJyuAY3dt6p5xMvJVutWoGpHtmVME",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "Ggh50g",
+        "thumbprint": "c8D-_KOv7e9F83sFV2aCQUY5EuDbEVp5_sN86S8bKTc",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 5
+  },
+  {
+    "origin": "https://xhah6q48pbxb4.keydirectory.signer.us-east-1.on.aws",
+    "url": "https://xhah6q48pbxb4.keydirectory.signer.us-east-1.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:55.861417+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "70pdwksCIzTDt7zCZoqGouPcD476nwNoWQNNTmN5bl8",
+        "thumbprint": "70pdwksCIzTDt7zCZoqGouPcD476nwNoWQNNTmN5bl8",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761110036,
+        "nbf_unit": "seconds",
+        "exp": 1792646036,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.7
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://c3drvlj8gw240.keydirectory.signer.eu-west-1.on.aws",
+    "url": "https://c3drvlj8gw240.keydirectory.signer.eu-west-1.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:56.762265+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "-l7uDo1b55AmqPB7lac2BLHl-MnhQOy2ccCuDhaiaEE",
+        "thumbprint": "-l7uDo1b55AmqPB7lac2BLHl-MnhQOy2ccCuDhaiaEE",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761173363,
+        "nbf_unit": "seconds",
+        "exp": 1792709363,
+        "exp_unit": "seconds",
+        "days_until_exp": 30.4
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://api.anchorbrowser.io",
+    "url": "https://api.anchorbrowser.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:57.187143+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "xA8MxwyS5igwFnAlQQ7Rnu2D4hDE0QqjQIKAQ51JQpU",
+        "thumbprint": "xA8MxwyS5igwFnAlQQ7Rnu2D4hDE0QqjQIKAQ51JQpU",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://www.kernel.sh",
+    "url": "https://www.kernel.sh/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:58.382652+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "5z6F4EJybUfoygglZXiAYaS6O1GU8hA1JrA-m7lGURM",
+        "thumbprint": "5z6F4EJybUfoygglZXiAYaS6O1GU8hA1JrA-m7lGURM",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1790080544,
+        "nbf_unit": "seconds",
+        "exp": 1790084144,
+        "exp_unit": "seconds",
+        "days_until_exp": 0.0
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://api.manus.im",
+    "url": "https://api.manus.im/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:58.628872+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "Xk_eOiOd9LOoBlPDuVGzORLcYvjm7zxBkaYHFsP6J_I",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://api.apify.com",
+    "url": "https://api.apify.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T12:59:59.396129+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "S5tJGJhYnre3a4qJE7nUArtrp0HpMJERoDKLpT_qUNg",
+        "thumbprint": "S5tJGJhYnre3a4qJE7nUArtrp0HpMJERoDKLpT_qUNg",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": "rag",
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://api.link.com",
+    "url": "https://api.link.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:00.190216+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=0, no-cache, no-store, must-revalidate",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "V_khXUprn_ogn4ISW47LoNMdWLnmmbQSpTNHunAy3d4",
+        "thumbprint": "V_khXUprn_ogn4ISW47LoNMdWLnmmbQSpTNHunAy3d4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://nekuda-agent-registry.onrender.com",
+    "url": "https://nekuda-agent-registry.onrender.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:00.793637+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json; charset=utf-8",
+    "cache_control": "public, max-age=3600",
+    "key_count": 2,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "AG_d4b2a665",
+        "thumbprint": "1irj0_mz1bxNBjsbbH82oudkUHi082Z1L9igwJPcsGQ",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "AG_0e229c54",
+        "thumbprint": "zEwr6MvKuHWUVg2eTnzNgjQA-EEeU4-avZj19B33rfs",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 2
+  },
+  {
+    "origin": "https://www.meta.com",
+    "url": "https://www.meta.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:01.315701+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "must-revalidate, max-age=3600",
+    "key_count": 3,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "Iy80tzAcbbb85lkjfKieYYwxAqinLDqDUBXjVMEnI_s",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "PZZZiz0rLbE9RZJ1DyryOFQzzqVwf96kCcr44MMKP0M",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "t8VHBHRHuPs0g3WFixNY2qbjohTnOWMIcd3neRZTkbE",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 3
+  },
+  {
+    "origin": "https://assistbot.duckduckgo.com",
+    "url": "https://assistbot.duckduckgo.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:03.159869+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86340",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "Ov3HDsa8JQ39dPEYFvFFN-cUpnz9yNI8LDvr-5LeiBM",
+        "thumbprint": "Ov3HDsa8JQ39dPEYFvFFN-cUpnz9yNI8LDvr-5LeiBM",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://you.com",
+    "url": "https://you.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:03.433923+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=300",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "5hbjTA0RjjhxRRquk32fSeRWfTgAdSHCZMK1afI1qvI",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://www.klaviyo.com",
+    "url": "https://www.klaviyo.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:03.807946+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "UcGYqoVGUU1pQTMaGP83yHRtZB56Eu9owg91DWDRge0",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://rye.xyz",
+    "url": "https://rye.xyz/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:04.253020+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "pruQTAkOsxc3Jgyewz0ladvjlgLp8iqe22EVSGJHEGg",
+        "thumbprint": "pruQTAkOsxc3Jgyewz0ladvjlgLp8iqe22EVSGJHEGg",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761116807,
+        "nbf_unit": "seconds",
+        "exp": 1792652807,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.8
+      }
+    ],
+    "purpose": "Agentic Checkout",
+    "signature_agent": "https://rye.xyz",
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://signatures.cardsavr.io",
+    "url": "https://signatures.cardsavr.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:08.022197+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 2,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "kjDYjuHvQbyZu4c4YyzRTI5I1_GAUMmKk3_e0hV-UJ0",
+        "thumbprint": "kjDYjuHvQbyZu4c4YyzRTI5I1_GAUMmKk3_e0hV-UJ0",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1784924915,
+        "nbf_unit": "seconds",
+        "exp": 2100284915,
+        "exp_unit": "seconds",
+        "days_until_exp": 3590.3
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "RrKZEzWC2GNXkoxngraQsWugImRYvPqs6Vt722Kvp9w",
+        "thumbprint": "RrKZEzWC2GNXkoxngraQsWugImRYvPqs6Vt722Kvp9w",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1784924915,
+        "nbf_unit": "seconds",
+        "exp": 2100284915,
+        "exp_unit": "seconds",
+        "days_until_exp": 3590.3
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 2
+  },
+  {
+    "origin": "https://payroll-bot.adp.com",
+    "url": "https://payroll-bot.adp.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:10.152130+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "4jPx6cqpG3eTvPB570IHzChHthSfYzHIo75XANkyLrU",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://www.browserless.io",
+    "url": "https://www.browserless.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:11.148615+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory; charset=utf-8",
+    "cache_control": "public,max-age=3600",
+    "key_count": 0,
+    "keys": [],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 0
+  },
+  {
+    "origin": "https://www.shopify.com",
+    "url": "https://www.shopify.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:11.941096+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 0,
+    "keys": [],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 0
+  },
+  {
+    "origin": "https://steel.dev",
+    "url": "https://steel.dev/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:12.094809+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate"
+  },
+  {
+    "origin": "https://hyperbrowser.ai",
+    "url": "https://hyperbrowser.ai/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:12.292169+00:00",
+    "status": 307,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=0, must-revalidate"
+  },
+  {
+    "origin": "https://www.hyperbrowser.ai",
+    "url": "https://www.hyperbrowser.ai/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:12.517551+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate",
+    "redirected_from": "https://hyperbrowser.ai"
+  },
+  {
+    "origin": "https://stripe.com",
+    "url": "https://stripe.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:12.655839+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://coinbase.com",
+    "url": "https://coinbase.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:13.068554+00:00",
+    "status": 302,
+    "content_type": "text/plain",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://www.coinbase.com",
+    "url": "https://www.coinbase.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:13.453041+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+    "redirected_from": "https://coinbase.com"
   }
 ]

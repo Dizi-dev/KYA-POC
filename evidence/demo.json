@@ -6,6 +6,7 @@
       "scenario": 1,
       "label": "Acme agent browses a product (signed)",
       "status": 200,
+      "reason": null,
       "outcome": "verified",
       "decision": "allow"
     },
@@ -13,6 +14,7 @@
       "scenario": 2,
       "label": "Acme agent checks out (TAP agent-payer-auth)",
       "status": 200,
+      "reason": null,
       "outcome": "verified",
       "decision": "allow"
     },
@@ -20,6 +22,7 @@
       "scenario": 3,
       "label": "Acme agent pulls the price API (signed)",
       "status": 402,
+      "reason": "ok",
       "outcome": "verified",
       "decision": "charge"
     },
@@ -27,6 +30,7 @@
       "scenario": 4,
       "label": "Attacker replays request 1 headers",
       "status": 403,
+      "reason": "nonce replayed",
       "outcome": "invalid",
       "decision": "block"
     },
@@ -34,6 +38,7 @@
       "scenario": 5,
       "label": "Attacker forges Acme's identity",
       "status": 403,
+      "reason": "signature does not match",
       "outcome": "invalid",
       "decision": "block"
     },
@@ -41,6 +46,7 @@
       "scenario": 6,
       "label": "Scraper sends 'GPTBot' User-Agent, no signature",
       "status": 403,
+      "reason": "no signature headers",
       "outcome": "unsigned",
       "decision": "block"
     },
@@ -48,6 +54,7 @@
       "scenario": 7,
       "label": "Unknown agent, directory offline (try 1)",
       "status": 200,
+      "reason": null,
       "outcome": "unverified",
       "decision": "allow"
     },
@@ -55,6 +62,7 @@
       "scenario": 7,
       "label": "Unknown agent, directory offline (try 2)",
       "status": 200,
+      "reason": null,
       "outcome": "unverified",
       "decision": "allow"
     },
@@ -62,6 +70,7 @@
       "scenario": 7,
       "label": "Unknown agent, directory offline (try 3)",
       "status": 429,
+      "reason": "directory unavailable: [Errno 61] Connection refused",
       "outcome": "unverified",
       "decision": "rate_limit"
     },
@@ -69,13 +78,38 @@
       "scenario": 8,
       "label": "Human with a normal browser",
       "status": 200,
+      "reason": null,
       "outcome": "unsigned",
       "decision": "allow"
+    },
+    {
+      "scenario": 9,
+      "label": "Acme rotates: request signed with NEW key",
+      "status": 200,
+      "reason": null,
+      "outcome": "verified",
+      "decision": "allow"
+    },
+    {
+      "scenario": 9,
+      "label": "Acme rotates: OLD key still published",
+      "status": 200,
+      "reason": null,
+      "outcome": "verified",
+      "decision": "allow"
+    },
+    {
+      "scenario": 9,
+      "label": "OLD key after Acme removed it (cache expired)",
+      "status": 429,
+      "reason": "keyid not published in the agent's directory",
+      "outcome": "unverified",
+      "decision": "rate_limit"
     }
   ],
   "chain_before": {
     "intact": true,
-    "detail": "10 entries, chain intact"
+    "detail": "13 entries, chain intact"
   },
   "chain_after_tamper": {
     "intact": false,

@@ -1,0 +1,2743 @@
+[
+  {
+    "origin": "https://app.accessspark.io/.well-known/http-message-signatures-directory",
+    "url": "https://app.accessspark.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:14.148783+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "yv1JxVyzKhLhgzAdpNlk61dxGgTXwCfWzvQAWDxvXzc",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "AccessSparkBot",
+    "operator": "Inner Spark Media, LLC",
+    "category": "SEARCH_ENGINE_OPTIMIZATION"
+  },
+  {
+    "origin": "https://api.agi.tech/.well-known/http-message-signatures-directory",
+    "url": "https://api.agi.tech/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:14.992344+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "CFtgCkbTK8KSwYj5E96RGZJcmLuIjOj5rcCPupChTQA",
+        "thumbprint": "CFtgCkbTK8KSwYj5E96RGZJcmLuIjOj5rcCPupChTQA",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "AGI Agent",
+    "operator": "AGI, Inc",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://search.ai.cloudflare.com/external/.well-known/http-message-signatures-directory",
+    "url": "https://search.ai.cloudflare.com/external/.well-known/http-message-signatures-directory",
+    "at_origin_root": false,
+    "checked_at": "2026-09-22T13:00:15.551264+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "Zsl8tctvhPYBnHbacdHDUhHoLzCMdApq94Y63WdoMzU",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "AI Search External",
+    "operator": "Cloudflare",
+    "category": "AI_SEARCH"
+  },
+  {
+    "origin": "https://kzejmtkesloc1.keydirectory.signer.ap-northeast-1.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://kzejmtkesloc1.keydirectory.signer.ap-northeast-1.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:15.705570+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "7GV8UW5uqgVQUyyGHcCMFId758np49HmQR836przbBA",
+        "thumbprint": "7GV8UW5uqgVQUyyGHcCMFId758np49HmQR836przbBA",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761110086,
+        "nbf_unit": "seconds",
+        "exp": 1792646086,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.7
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (AP Northeast)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://wdfzm130yrb91.keydirectory.signer.ap-south-1.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://wdfzm130yrb91.keydirectory.signer.ap-south-1.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:18.426172+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "amc8Bz-xH6jDxkFFUglEfufGDDm7rCk0hlIebmwMYQE",
+        "thumbprint": "amc8Bz-xH6jDxkFFUglEfufGDDm7rCk0hlIebmwMYQE",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761109960,
+        "nbf_unit": "seconds",
+        "exp": 1792645960,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.7
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (AP South)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://slf696jfe4gp0.keydirectory.signer.ap-southeast-1.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://slf696jfe4gp0.keydirectory.signer.ap-southeast-1.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:19.420881+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "yJvuT_BV7Bh-5-7q52JojnYGJJhPnPovwSxo52tpZX8",
+        "thumbprint": "yJvuT_BV7Bh-5-7q52JojnYGJJhPnPovwSxo52tpZX8",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761173233,
+        "nbf_unit": "seconds",
+        "exp": 1792709233,
+        "exp_unit": "seconds",
+        "days_until_exp": 30.4
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (AP Southeast 1)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://meh0x7tptr6o1.keydirectory.signer.ap-southeast-2.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://meh0x7tptr6o1.keydirectory.signer.ap-southeast-2.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:21.829342+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "Y0Y9KQtdCz1gcIsVphQKp2NTzb3O5K3UEdsra04nefk",
+        "thumbprint": "Y0Y9KQtdCz1gcIsVphQKp2NTzb3O5K3UEdsra04nefk",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761109891,
+        "nbf_unit": "seconds",
+        "exp": 1792645891,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.7
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (AP Southeast)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://o42g509c7dlj6.keydirectory.signer.eu-central-1.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://o42g509c7dlj6.keydirectory.signer.eu-central-1.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:24.037122+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "TsrJ6TOUfApTa8i55-urn-PEPQ595_PbNT-PdYH2jiQ",
+        "thumbprint": "TsrJ6TOUfApTa8i55-urn-PEPQ595_PbNT-PdYH2jiQ",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761173311,
+        "nbf_unit": "seconds",
+        "exp": 1792709311,
+        "exp_unit": "seconds",
+        "days_until_exp": 30.4
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (EU Central 1)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://c3drvlj8gw240.keydirectory.signer.eu-west-1.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://c3drvlj8gw240.keydirectory.signer.eu-west-1.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:24.360542+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "-l7uDo1b55AmqPB7lac2BLHl-MnhQOy2ccCuDhaiaEE",
+        "thumbprint": "-l7uDo1b55AmqPB7lac2BLHl-MnhQOy2ccCuDhaiaEE",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761173363,
+        "nbf_unit": "seconds",
+        "exp": 1792709363,
+        "exp_unit": "seconds",
+        "days_until_exp": 30.4
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (EU West 1)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://xhah6q48pbxb4.keydirectory.signer.us-east-1.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://xhah6q48pbxb4.keydirectory.signer.us-east-1.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:24.718313+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "70pdwksCIzTDt7zCZoqGouPcD476nwNoWQNNTmN5bl8",
+        "thumbprint": "70pdwksCIzTDt7zCZoqGouPcD476nwNoWQNNTmN5bl8",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761110036,
+        "nbf_unit": "seconds",
+        "exp": 1792646036,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.7
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (US East 1)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://ogtj5xdh5udp4.keydirectory.signer.us-east-2.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://ogtj5xdh5udp4.keydirectory.signer.us-east-2.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:25.523368+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "83VamJGFEN-sjc3IKBA7_biG5zyJ1E6gA63ujKlCex4",
+        "thumbprint": "83VamJGFEN-sjc3IKBA7_biG5zyJ1E6gA63ujKlCex4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761110147,
+        "nbf_unit": "seconds",
+        "exp": 1792646147,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.7
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (US East 2)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://bxtrz00tv0lm1.keydirectory.signer.us-west-2.on.aws/.well-known/http-message-signatures-directory",
+    "url": "https://bxtrz00tv0lm1.keydirectory.signer.us-west-2.on.aws/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:26.459042+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "tmNl1zQSgQd9rE8cncbX_Ug2nvq6V38ThzavfvT_DPM",
+        "thumbprint": "tmNl1zQSgQd9rE8cncbX_Ug2nvq6V38ThzavfvT_DPM",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761109002,
+        "nbf_unit": "seconds",
+        "exp": 1792645002,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.7
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Amazon Bedrock AgentCore Browser (US West 2)",
+    "operator": "Amazon",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://api.anchorbrowser.io/.well-known/http-message-signatures-directory",
+    "url": "https://api.anchorbrowser.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:27.746023+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "xA8MxwyS5igwFnAlQQ7Rnu2D4hDE0QqjQIKAQ51JQpU",
+        "thumbprint": "xA8MxwyS5igwFnAlQQ7Rnu2D4hDE0QqjQIKAQ51JQpU",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Anchor Browser",
+    "operator": "Anchor",
+    "category": "AI_CRAWLER"
+  },
+  {
+    "origin": "https://api.apify.com/.well-known/http-message-signatures-directory",
+    "url": "https://api.apify.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:28.787041+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "S5tJGJhYnre3a4qJE7nUArtrp0HpMJERoDKLpT_qUNg",
+        "thumbprint": "S5tJGJhYnre3a4qJE7nUArtrp0HpMJERoDKLpT_qUNg",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": "rag",
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Apify Website Content Crawler",
+    "operator": "Apify",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://projectarachnid.com/.well-known/http-message-signatures-directory",
+    "url": "https://projectarachnid.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:29.556638+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "S5Y-u0RlDKk5H5eozgWIT-NH2eHOaz1ARsBhBIunf_g",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Arachnid Shield API",
+    "operator": "Canadian Centre for Child Protection",
+    "category": "SECURITY"
+  },
+  {
+    "origin": "https://kg.artsdata.ca/.well-known/http-message-signatures-directory",
+    "url": "https://kg.artsdata.ca/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:30.622177+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400, private",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "nqBDjj0MadzG_URItCeeMStABPlylL7R_pq1aLGQCUo",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Artsdata Crawler",
+    "operator": "Culture Creates",
+    "category": "AGGREGATOR"
+  },
+  {
+    "origin": "https://audd.io/.well-known/http-message-signatures-directory",
+    "url": "https://audd.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:31.475529+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "xV7oOW9P-yP0a-qiq5VSrmnPC4jN4catWrB7eHBLox4",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "AudD",
+    "operator": "AudD, LLC",
+    "category": "OTHER"
+  },
+  {
+    "origin": "https://www.browserbase.com/.well-known/http-message-signatures-directory",
+    "url": "https://www.browserbase.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:32.027490+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 2,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "g9QW9yAMXntikfU_mMk8tRFAXeEQOcAGAwNXibApZtE",
+        "thumbprint": "g9QW9yAMXntikfU_mMk8tRFAXeEQOcAGAwNXibApZtE",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "7MsGv9qv7keRm2KnNG-mHXasHK0K1ctX9pLI3kb_8SI",
+        "thumbprint": "7MsGv9qv7keRm2KnNG-mHXasHK0K1ctX9pLI3kb_8SI",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": "rag",
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 2,
+    "name": "Browserbase",
+    "operator": "Browserbase",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://brynsights.brynson.com/.well-known/http-message-signatures-directory",
+    "url": "https://brynsights.brynson.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:32.288711+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400, private",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "lkZ9PQEO5hyTKZ2dAgKAdm-VROhJ7C8A1Fr1b0fW2nA",
+        "thumbprint": "lkZ9PQEO5hyTKZ2dAgKAdm-VROhJ7C8A1Fr1b0fW2nA",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Brynson Compliance Bot",
+    "operator": "Brynson",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://builtwith.com/.well-known/http-message-signatures-directory",
+    "url": "https://builtwith.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:33.089010+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json; charset=utf-8",
+    "cache_control": "private",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "RJ-XBf5L58URkDwPTqvFM5HGZmLocn6K4KtylqoScuw",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "BuiltWith",
+    "operator": "BuiltWith",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://cartai.us/.well-known/http-message-signatures-directory",
+    "url": "https://cartai.us/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:34.066524+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=150",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "JLLdCcE15G0jrMRXEl9gPHkC0MMRlF9WXPY8bcubmu4",
+        "thumbprint": "JLLdCcE15G0jrMRXEl9gPHkC0MMRlF9WXPY8bcubmu4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1764547200,
+        "nbf_unit": "seconds",
+        "exp": 1796083200,
+        "exp_unit": "seconds",
+        "days_until_exp": 69.5
+      }
+    ],
+    "purpose": "Agentic Commerce Order Placement",
+    "signature_agent": "https://cartai.us",
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "CartAI Agentic Commerce as a Service",
+    "operator": "CartAI",
+    "category": "OTHER"
+  },
+  {
+    "origin": "https://bot.trychannel3.com/.well-known/http-message-signatures-directory",
+    "url": "https://bot.trychannel3.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:34.647662+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "N5WFufhphg6NMi9fmvhQXjD4lf8HyxplJWArtOxsgLA",
+        "thumbprint": "N5WFufhphg6NMi9fmvhQXjD4lf8HyxplJWArtOxsgLA",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": "agentic_commerce",
+    "signature_agent": "https://bot.trychannel3.com",
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Channel3Bot",
+    "operator": "Channel3",
+    "category": "SEARCH_ENGINE_CRAWLER"
+  },
+  {
+    "origin": "https://chatgpt.com/.well-known/http-message-signatures-directory",
+    "url": "https://chatgpt.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:36.512411+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "no-store, no-transform",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY",
+        "thumbprint": "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1735689600,
+        "nbf_unit": "seconds",
+        "exp": 1790686836,
+        "exp_unit": "seconds",
+        "days_until_exp": 7.0
+      }
+    ],
+    "purpose": "ai",
+    "signature_agent": "https://chatgpt.com",
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "ChatGPT agent",
+    "operator": "OpenAI",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://gerard.cledara.ai/.well-known/http-message-signatures-directory/",
+    "url": "https://gerard.cledara.ai/.well-known/http-message-signatures-directory/",
+    "at_origin_root": false,
+    "checked_at": "2026-09-22T13:00:37.752308+00:00",
+    "status": 308,
+    "content_type": "",
+    "cache_control": "",
+    "name": "Cledara SaaS Management Agent",
+    "operator": "Cledara",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://web-bot-auth.chambers.cfdata.org/.well-known/http-message-signatures-directory",
+    "url": "https://web-bot-auth.chambers.cfdata.org/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:38.899637+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=300",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "8Yf3Aa0P2pJ6KgC79Q9VGCk5IAXl5ayj4ttknHMlXOE",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Cloudflare Agent Readiness",
+    "operator": null,
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://search.ai.cloudflare.com/.well-known/http-message-signatures-directory",
+    "url": "https://search.ai.cloudflare.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:39.146164+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "pJpgX62TMLisTKcWD7sNN6BWehdmjWKwr144YZAnZ08",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "AI Search",
+    "operator": "Cloudflare",
+    "category": "AI_SEARCH"
+  },
+  {
+    "origin": "https://web-bot-auth.cloudflare-browser-rendering-085.workers.dev/.well-known/http-message-signatures-directory",
+    "url": "https://web-bot-auth.cloudflare-browser-rendering-085.workers.dev/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:39.270397+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 3,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "QHrZVI7uYXBXsRaTTUojpmFG0UNelgU8-n5tmuRh08U",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "3JVD-GUlusv36Msck-1m0nvGAwt3xBNNVIVqYe15CYU",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "WdHpbKqU_Xqe-C5zUhXY9yUAuggIzqebBWFV04NEcpc",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 3,
+    "name": "Cloudflare Browser Run",
+    "operator": "Cloudflare",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://web-bot-auth-crawl.cloudflare-browser-rendering-085.workers.dev/.well-known/http-message-signatures-directory",
+    "url": "https://web-bot-auth-crawl.cloudflare-browser-rendering-085.workers.dev/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:39.706472+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 3,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "lFw0i-eAcdNBehkZXLCDuiMeqyZ7v34yTBBIkH0Lcak",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "zUMIbIQDlgwoDj8J9qKxsjSg4nLMzf2VPJ1sVY44Pjw",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "81Ku7CtB5v1xpRtVe7llUpDgM_iEdItlyU53z4U54HU",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 3,
+    "name": "Cloudflare Crawler",
+    "operator": "Cloudflare",
+    "category": "AI_CRAWLER"
+  },
+  {
+    "origin": "https://bot-auth-worker-staging.product-sre.workers.dev/.well-known/http-message-signatures-directory",
+    "url": "https://bot-auth-worker-staging.product-sre.workers.dev/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:39.992094+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "no-store",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "XDj4xR4EBJ9RrM9TtXSD1uNVPsbuf8Guk4cPpsmHuOo",
+        "thumbprint": "XDj4xR4EBJ9RrM9TtXSD1uNVPsbuf8Guk4cPpsmHuOo",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Cloudflare CustomerSLO Prober (Staging)",
+    "operator": "Cloudflare",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://bot-auth-worker.product-sre.workers.dev/.well-known/http-message-signatures-directory",
+    "url": "https://bot-auth-worker.product-sre.workers.dev/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:40.155893+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "no-store",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "2xx8ljYkjOyRzUmxTx9F9mpIVbB6QXNCPZYMMv9h3y4",
+        "thumbprint": "2xx8ljYkjOyRzUmxTx9F9mpIVbB6QXNCPZYMMv9h3y4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Cloudflare CustomerSLO Prober",
+    "operator": "Cloudflare",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://web-bot-auth-directory.radar-cfdata-org.workers.dev/.well-known/http-message-signatures-directory",
+    "url": "https://web-bot-auth-directory.radar-cfdata-org.workers.dev/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:40.286716+00:00",
+    "status": 404,
+    "content_type": "application/problem+json; charset=utf-8",
+    "cache_control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "name": "Cloudflare Radar URL Scanner",
+    "operator": "Cloudflare",
+    "category": "SECURITY"
+  },
+  {
+    "origin": "https://9ae614b6-fb5a-4549-8d3e-448628101e49.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "url": "https://9ae614b6-fb5a-4549-8d3e-448628101e49.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:40.445518+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "advbYyJPHCWsOt3j4S9wq5YVscw2KaqQapjJGJcu3pY",
+        "thumbprint": "advbYyJPHCWsOt3j4S9wq5YVscw2KaqQapjJGJcu3pY",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Cloudflare Robots API",
+    "operator": "Cloudflare",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://d7c111cd-310f-45a1-bf94-1d7619c74a04.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "url": "https://d7c111cd-310f-45a1-bf94-1d7619c74a04.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:40.813793+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "6FX2t9BaDwQmAV6Yi3sTJ-DyDkmVWLPnuhtT69AG8W0",
+        "thumbprint": "6FX2t9BaDwQmAV6Yi3sTJ-DyDkmVWLPnuhtT69AG8W0",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Cloudflare Web Scanner",
+    "operator": "Cloudflare",
+    "category": "SEARCH_ENGINE_CRAWLER"
+  },
+  {
+    "origin": "https://consentcheck.site/.well-known/http-message-signatures-directory",
+    "url": "https://consentcheck.site/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:41.094780+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public,max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "g3OPl1RjI2iaP58UPlDm91w3hAh8y9lHidesGxFuqMw",
+        "thumbprint": "g3OPl1RjI2iaP58UPlDm91w3hAh8y9lHidesGxFuqMw",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "ConsentCheck Bot",
+    "operator": "ConsentCheck",
+    "category": "SECURITY"
+  },
+  {
+    "origin": "https://cybaa.io/.well-known/http-message-signatures-directory",
+    "url": "https://cybaa.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:41.930267+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "Nk3dlwIepZGCY8teO7tVqSrd686jSDcquLIC08Lyl6c",
+        "thumbprint": "Nk3dlwIepZGCY8teO7tVqSrd686jSDcquLIC08Lyl6c",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Cybaa Bot",
+    "operator": null,
+    "category": "SECURITY"
+  },
+  {
+    "origin": "https://9ed846ee-31d6-4dc7-be9c-c57d769a68c8.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "url": "https://9ed846ee-31d6-4dc7-be9c-c57d769a68c8.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:42.269443+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "hXHNCbkaiPjCX1v8BHg3WPflqfuYv9k1iDyzsw55Xck",
+        "thumbprint": "hXHNCbkaiPjCX1v8BHg3WPflqfuYv9k1iDyzsw55Xck",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Daric2",
+    "operator": "Cloudflare",
+    "category": "AI_CRAWLER"
+  },
+  {
+    "origin": "https://fce34b5f-e942-453c-8203-efa46f63136e.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "url": "https://fce34b5f-e942-453c-8203-efa46f63136e.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:42.559739+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "3-fK-8m5nysbc9ouiriwHrGw4lPYE-hVAvAuAUIToT0",
+        "thumbprint": "3-fK-8m5nysbc9ouiriwHrGw4lPYE-hVAvAuAUIToT0",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Daric3",
+    "operator": "Cloudflare",
+    "category": "AI_CRAWLER"
+  },
+  {
+    "origin": "https://9183a4a8-5a53-4cb3-8d59-16ae94b9f950.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "url": "https://9183a4a8-5a53-4cb3-8d59-16ae94b9f950.wba-bots.ai-audit.cfdata.org/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:42.850761+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 4,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "LfC8vGUKgwhB38MngPVa1e6_kiDMi9EHVdaB8UsPx50",
+        "thumbprint": "LfC8vGUKgwhB38MngPVa1e6_kiDMi9EHVdaB8UsPx50",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "AvP03CkiG2Js4wVQISdNqFgz4iYMcdTwBA8CaDOalMs",
+        "thumbprint": "AvP03CkiG2Js4wVQISdNqFgz4iYMcdTwBA8CaDOalMs",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "NtnM9snP9whB2DBsByRs8P5YnO8yAEt9GaKoXAI1gtM",
+        "thumbprint": "NtnM9snP9whB2DBsByRs8P5YnO8yAEt9GaKoXAI1gtM",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "yZ1WimZ5j9PiQxaWFK5geEbYhR6sPydaCMZtlqNv3lU",
+        "thumbprint": "yZ1WimZ5j9PiQxaWFK5geEbYhR6sPydaCMZtlqNv3lU",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 4,
+    "name": "Daric4",
+    "operator": "Cloudflare",
+    "category": "AI_CRAWLER"
+  },
+  {
+    "origin": "https://dentalpresence.in/.well-known/http-message-signatures-directory",
+    "url": "https://dentalpresence.in/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:43.143432+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "private, no-store, max-age=0",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "Ag8iPHdIQ_awiqHF4SgEDDWHFMr8K3VA_pGCTHFSoxQ",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "DentalPresence Audit Bot",
+    "operator": "DentalPresence",
+    "category": "SEARCH_ENGINE_OPTIMIZATION"
+  },
+  {
+    "origin": "https://dnsniffer.com/.well-known/http-message-signatures-directory",
+    "url": "https://dnsniffer.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:44.328879+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "cBdHK-pzbAQOLD4N3ZvVon6uLnxhODoFtbwKjUSy5rg",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "DNSnifferBot",
+    "operator": "DNSniffer",
+    "category": "SECURITY"
+  },
+  {
+    "origin": "https://app.drug-card.io/.well-known/http-message-signatures-directory",
+    "url": "https://app.drug-card.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:44.560706+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=3600, public",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "sXWqDBE5050Ze6-rg5JwxMccG9amOoSkMGwVQ1_D7jk",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "DrugCardBot",
+    "operator": "DrugCard",
+    "category": "AGGREGATOR"
+  },
+  {
+    "origin": "https://assistbot.duckduckgo.com/.well-known/http-message-signatures-directory",
+    "url": "https://assistbot.duckduckgo.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:45.062380+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86340",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "Ov3HDsa8JQ39dPEYFvFFN-cUpnz9yNI8LDvr-5LeiBM",
+        "thumbprint": "Ov3HDsa8JQ39dPEYFvFFN-cUpnz9yNI8LDvr-5LeiBM",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "DuckAssistbot",
+    "operator": "DuckDuckGo",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://admin.itrk-easysafe.de/.well-known/http-message-signatures-directory",
+    "url": "https://admin.itrk-easysafe.de/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:45.323990+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json; charset=utf-8",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "blMPEeG2iPeMk_56OkO6bLj5HXvraX-4A6FKXaEvJdE",
+        "thumbprint": "blMPEeG2iPeMk_56OkO6bLj5HXvraX-4A6FKXaEvJdE",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "EasyScan",
+    "operator": "codire GmbH",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://api.firmly.online/.well-known/http-message-signatures-directory",
+    "url": "https://api.firmly.online/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:45.579517+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "z5QNfiqQln9vi6bknBcrseX_7gJHfIBX4Mx_0C6ALQE",
+        "thumbprint": "z5QNfiqQln9vi6bknBcrseX_7gJHfIBX4Mx_0C6ALQE",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "FirmlyAI Bot",
+    "operator": "Firmly",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://crawler.flowpane.com/.well-known/http-message-signatures-directory",
+    "url": "https://crawler.flowpane.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:45.804538+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json; charset=utf-8",
+    "cache_control": "public, max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "QZdoanWPKy-cHIy6B080FKtxV0Zky1tSDQ6WIslvi7E",
+        "thumbprint": "QZdoanWPKy-cHIy6B080FKtxV0Zky1tSDQ6WIslvi7E",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1773407030860,
+        "nbf_unit": "milliseconds?",
+        "exp": 1804943030860,
+        "exp_unit": "milliseconds?",
+        "days_until_exp": 172.0
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Flowpane",
+    "operator": "Flowpane Ltd",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://page-optimizer.flyingpress.com/.well-known/http-message-signatures-directory",
+    "url": "https://page-optimizer.flyingpress.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:46.164680+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "LKQFpaanYp_W8NrLa7HJwWO4Zz-FFNC5zNWt5OaYKBA",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "FlyingPress",
+    "operator": "FlyingWeb LLC",
+    "category": "SEARCH_ENGINE_OPTIMIZATION"
+  },
+  {
+    "origin": "https://explore.ghost.org/.well-known/http-message-signatures-directory",
+    "url": "https://explore.ghost.org/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:46.879890+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=60, public, s-maxage=60",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "qvSgU2nYkKAhIQeMMWHDyfJllybLTUK4Ho6O4HTZw_A",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "GhostExplore",
+    "operator": "Ghost",
+    "category": "AGGREGATOR"
+  },
+  {
+    "origin": "https://cursorusercontent.com/.well-known/http-message-signatures-directory",
+    "url": "https://cursorusercontent.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:47.533863+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json; charset=utf-8",
+    "cache_control": "public, max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "Vuxu4khgzIe0b30Nd6hq2envAuVBFMTDqorSNIUb_Oo",
+        "thumbprint": "Vuxu4khgzIe0b30Nd6hq2envAuVBFMTDqorSNIUb_Oo",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1786403101,
+        "nbf_unit": "seconds",
+        "exp": 1817939101,
+        "exp_unit": "seconds",
+        "days_until_exp": 322.4
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Grok Bot",
+    "operator": "xAI",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://hank.parts/.well-known/http-message-signatures-directory",
+    "url": "https://hank.parts/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:48.364445+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "no-cache",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "5LiRlDGOiRHwJZkCnjiPSidMdj2PGAZXV6zZ1oVWOlo",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "hankbot",
+    "operator": "hank.parts",
+    "category": "SEARCH_ENGINE_CRAWLER"
+  },
+  {
+    "origin": "https://app.hark.com/.well-known/http-message-signatures-directory",
+    "url": "https://app.hark.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:48.775009+00:00",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "cache_control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "name": "HarkBot",
+    "operator": "Hark",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://www.henrylabs.ai/.well-known/http-message-signatures-directory",
+    "url": "https://www.henrylabs.ai/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:48.903427+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "qTHUBf7EC_LRRSojcmjpqPnZmn8-c2UmNTY8WY7xSR0",
+        "thumbprint": "qTHUBf7EC_LRRSojcmjpqPnZmn8-c2UmNTY8WY7xSR0",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1735689600,
+        "nbf_unit": "seconds",
+        "exp": 1790686849,
+        "exp_unit": "seconds",
+        "days_until_exp": 7.0
+      }
+    ],
+    "purpose": "ai",
+    "signature_agent": "https://www.henrylabs.ai",
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Henry Shopping Agent",
+    "operator": "Henry Labs",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://logos.hunter.io/.well-known/http-message-signatures-directory",
+    "url": "https://logos.hunter.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:49.160534+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "XUTOys9wNKm3RByyxfcfro3tDfFZfOzkCDoAK-Usp_k",
+        "thumbprint": "XUTOys9wNKm3RByyxfcfro3tDfFZfOzkCDoAK-Usp_k",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Hunter Logos",
+    "operator": "Hunter Web Services, Inc",
+    "category": "OTHER"
+  },
+  {
+    "origin": "https://instantaiguru.com/.well-known/http-message-signatures-directory",
+    "url": "https://instantaiguru.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:49.300345+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "private, no-store, max-age=0",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "k6IJ2uDsDRkxJjn1PzHePUBpDwIasZtUcCJfEuUu0Vg",
+        "thumbprint": "k6IJ2uDsDRkxJjn1PzHePUBpDwIasZtUcCJfEuUu0Vg",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "InstantAIGuruBot",
+    "operator": "instantAIguru",
+    "category": "AI_SEARCH"
+  },
+  {
+    "origin": "https://news-crawler.keldan.is/.well-known/http-message-signatures-directory",
+    "url": "https://news-crawler.keldan.is/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:49.760304+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "no-store",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "spy8mi_krWR2P5g0B1qRppODacJpKXk20GaRO14Y2eY",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "KeldanNewsCrawler",
+    "operator": "Keldan ehf.",
+    "category": "SEARCH_ENGINE_CRAWLER"
+  },
+  {
+    "origin": "https://www.kernel.sh/.well-known/http-message-signatures-directory",
+    "url": "https://www.kernel.sh/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:50.106195+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "5z6F4EJybUfoygglZXiAYaS6O1GU8hA1JrA-m7lGURM",
+        "thumbprint": "5z6F4EJybUfoygglZXiAYaS6O1GU8hA1JrA-m7lGURM",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1790080544,
+        "nbf_unit": "seconds",
+        "exp": 1790084144,
+        "exp_unit": "seconds",
+        "days_until_exp": 0.0
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Kernel",
+    "operator": "Kernel",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://search.bot.kernel.sh/.well-known/http-message-signatures-directory",
+    "url": "https://search.bot.kernel.sh/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:50.423290+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "BIHzNFi0HX0GN8Hp63CgaVIYBDAbYSW6uur7e72WhMg",
+        "thumbprint": "BIHzNFi0HX0GN8Hp63CgaVIYBDAbYSW6uur7e72WhMg",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1790081327,
+        "nbf_unit": "seconds",
+        "exp": 1790084927,
+        "exp_unit": "seconds",
+        "days_until_exp": 0.0
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Kernel Search",
+    "operator": "Kernel Technologies, Inc.",
+    "category": "AI_SEARCH"
+  },
+  {
+    "origin": "https://www.klaviyo.com/.well-known/http-message-signatures-directory",
+    "url": "https://www.klaviyo.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:50.732513+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "UcGYqoVGUU1pQTMaGP83yHRtZB56Eu9owg91DWDRge0",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "KlaviyoAIBot",
+    "operator": "Klaviyo",
+    "category": "AI_SEARCH"
+  },
+  {
+    "origin": "https://agent.getonlane.com/.well-known/http-message-signatures-directory",
+    "url": "https://agent.getonlane.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:51.167279+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "BDDK5mT1_scgTAfFkEGPg0J0oexN7FAo9Wl_nywuh7I",
+        "thumbprint": "BDDK5mT1_scgTAfFkEGPg0J0oexN7FAo9Wl_nywuh7I",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Lane Agent",
+    "operator": "Lane",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://api.link.com/.well-known/http-message-signatures-directory",
+    "url": "https://api.link.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:53.330044+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=0, no-cache, no-store, must-revalidate",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "V_khXUprn_ogn4ISW47LoNMdWLnmmbQSpTNHunAy3d4",
+        "thumbprint": "V_khXUprn_ogn4ISW47LoNMdWLnmmbQSpTNHunAy3d4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Link CLI",
+    "operator": "Link",
+    "category": "OTHER"
+  },
+  {
+    "origin": "https://api.manus.im/.well-known/http-message-signatures-directory",
+    "url": "https://api.manus.im/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:53.914918+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "Xk_eOiOd9LOoBlPDuVGzORLcYvjm7zxBkaYHFsP6J_I",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Manus Bot",
+    "operator": "Manus",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://media.mediaboard.com/.well-known/http-message-signatures-directory",
+    "url": "https://media.mediaboard.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:54.684516+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "KSMPkMPIFeCbMXJ3qJ8wHpW9RPPkgqQ7pW9Mh24G4Eg",
+        "thumbprint": "KSMPkMPIFeCbMXJ3qJ8wHpW9RPPkgqQ7pW9Mh24G4Eg",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "mediaboardbot",
+    "operator": "Mediaboard",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://www.meta.com/.well-known/http-message-signatures-directory",
+    "url": "https://www.meta.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:54.911618+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "must-revalidate, max-age=3600",
+    "key_count": 3,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "Iy80tzAcbbb85lkjfKieYYwxAqinLDqDUBXjVMEnI_s",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "PZZZiz0rLbE9RZJ1DyryOFQzzqVwf96kCcr44MMKP0M",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "t8VHBHRHuPs0g3WFixNY2qbjohTnOWMIcd3neRZTkbE",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 3,
+    "name": "Meta-ExternalTest",
+    "operator": "Meta",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://dev.labs-asp.navateam.com/.well-known/http-message-signatures-directory",
+    "url": "https://dev.labs-asp.navateam.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:55.814473+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "private, max-age=60",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "7YGvanRmbwiz8FqvVJd86wHWd_2lYI4aCUKdqCXuxEw",
+        "thumbprint": "7YGvanRmbwiz8FqvVJd86wHWd_2lYI4aCUKdqCXuxEw",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Nava Labs ASP (Dev)",
+    "operator": "Nava Labs",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://nekuda-agent-registry.onrender.com/.well-known/http-message-signatures-directory",
+    "url": "https://nekuda-agent-registry.onrender.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:56.460754+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json; charset=utf-8",
+    "cache_control": "public, max-age=3600",
+    "key_count": 2,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "AG_d4b2a665",
+        "thumbprint": "1irj0_mz1bxNBjsbbH82oudkUHi082Z1L9igwJPcsGQ",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "AG_0e229c54",
+        "thumbprint": "zEwr6MvKuHWUVg2eTnzNgjQA-EEeU4-avZj19B33rfs",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 2,
+    "name": "Nekuda Payment Executor",
+    "operator": "Nekuda",
+    "category": "OTHER"
+  },
+  {
+    "origin": "https://bots.nostra.ai/.well-known/http-message-signatures-directory",
+    "url": "https://bots.nostra.ai/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:57.302372+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 2,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "3vKgyEtYsNMyY8M-CDk8_HzkuZO22aLy_LlHEjtT3WI",
+        "thumbprint": "3vKgyEtYsNMyY8M-CDk8_HzkuZO22aLy_LlHEjtT3WI",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1743465600000,
+        "nbf_unit": "milliseconds?"
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "Pav1sqEdDlQ9qYyCUqV7J5oT3Eh2aTabW5-Ii6OCHT0",
+        "thumbprint": "Pav1sqEdDlQ9qYyCUqV7J5oT3Eh2aTabW5-Ii6OCHT0",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1743465600000,
+        "nbf_unit": "milliseconds?"
+      }
+    ],
+    "purpose": "multi-service",
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 2,
+    "name": "Nostra",
+    "operator": "Nostra",
+    "category": "SEARCH_ENGINE_OPTIMIZATION"
+  },
+  {
+    "origin": "https://crawl.corp.novellum.ai/.well-known/http-message-signatures-directory",
+    "url": "https://crawl.corp.novellum.ai/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:57.544526+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "",
+    "name": "Novellum AI Crawl",
+    "operator": "Novellum",
+    "category": "AI_CRAWLER"
+  },
+  {
+    "origin": "https://ontica.com.au/.well-known/http-message-signatures-directory",
+    "url": "https://ontica.com.au/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:57.908528+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json; charset=utf-8",
+    "cache_control": "private",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "vFgzvIohSrTxRtF9VyH44rSMkEVTJhMLUn4fsmbKpX4",
+        "thumbprint": "vFgzvIohSrTxRtF9VyH44rSMkEVTJhMLUn4fsmbKpX4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "OnticaBot",
+    "operator": "Ontica Pty Ltd",
+    "category": "SOCIAL_MEDIA_MARKETING"
+  },
+  {
+    "origin": "https://withpanache.dev/.well-known/http-message-signatures-directory",
+    "url": "https://withpanache.dev/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:58.870170+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "OkCxNiGYQIhlKwFyqcDOmH9WsiiBZcsEVOiz9zqE1r4",
+        "thumbprint": "OkCxNiGYQIhlKwFyqcDOmH9WsiiBZcsEVOiz9zqE1r4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "PanacheBot",
+    "operator": "Panache",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://api.minalabs.io/.well-known/http-message-signatures-directory",
+    "url": "https://api.minalabs.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:59.162046+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "7CIbiq8pU8f1TRfylS9JutU1BRKiQKN2LrfV3qSjlKw",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "ParticleNewsBot",
+    "operator": null,
+    "category": "AGGREGATOR"
+  },
+  {
+    "origin": "https://external-bot.payhawk.com/.well-known/http-message-signatures-directory",
+    "url": "https://external-bot.payhawk.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:00:59.826408+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public,max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "kB3PTzPKNP0DIEkjhP0hGYT7YrwHHzCC9e5fEu07G70",
+        "thumbprint": "kB3PTzPKNP0DIEkjhP0hGYT7YrwHHzCC9e5fEu07G70",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Payhawk Invoice Fetching Agent",
+    "operator": "Payhawk",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://payroll-bot.adp.com/.well-known/http-message-signatures-directory",
+    "url": "https://payroll-bot.adp.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:00.153294+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "4jPx6cqpG3eTvPB570IHzChHthSfYzHIo75XANkyLrU",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "payroll-bot",
+    "operator": "ADP",
+    "category": "AI_CRAWLER"
+  },
+  {
+    "origin": "https://www.platebreaker.com/.well-known/http-message-signatures-directory",
+    "url": "https://www.platebreaker.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:00.808379+00:00",
+    "status": 200,
+    "content_type": "binary/octet-stream",
+    "cache_control": "public,max-age=31536000,immutable",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "platebreaker-bot-v1",
+        "thumbprint": "aOg99pxQep17RiX1ODkLI6neEffZUOylN5u2xRPgTrA",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Platebreaker",
+    "operator": "Platebreaker",
+    "category": "SEARCH_ENGINE_CRAWLER"
+  },
+  {
+    "origin": "https://cf.playpatrol.app/.well-known/http-message-signatures-directory",
+    "url": "https://cf.playpatrol.app/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:01.022874+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=60",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "hZ_gtb1K_e4ovrpwDcZqbBqGAE1YfLtjikrUd3uuxZs",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Playpatrol",
+    "operator": "CreateIT",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://web-bot-auth-keys.wilico-ppc-bot.workers.dev/.well-known/http-message-signatures-directory",
+    "url": "https://web-bot-auth-keys.wilico-ppc-bot.workers.dev/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:01.532783+00:00",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "web-bot-auth-key-1",
+        "thumbprint": "5a88NoqwyTNQ9FxjAjmR-0OyCWNDxsXtSXz8M8bba2c",
+        "kid_matches_thumbprint": false,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Pricey",
+    "operator": "Wilico",
+    "category": "AGGREGATOR"
+  },
+  {
+    "origin": "https://pureconsent.com/.well-known/http-message-signatures-directory",
+    "url": "https://pureconsent.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:01.698480+00:00",
+    "status": 302,
+    "content_type": "text/html; charset=UTF-8",
+    "cache_control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "name": "PureConsentBot",
+    "operator": "PureConsent",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://app.bugduck.tech/.well-known/http-message-signatures-directory",
+    "url": "https://app.bugduck.tech/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:01.914030+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "alEo7xFZ0TJBxXKeBIHc7z08yGUrCGWQM_5OtPkiaF8",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "QAtechBot",
+    "operator": "QA.tech",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://crawler.prod.quartr.cloud/.well-known/http-message-signatures-directory",
+    "url": "https://crawler.prod.quartr.cloud/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:02.176744+00:00",
+    "error": "ConnectTimeout: timed out",
+    "name": "Quartr Crawler",
+    "operator": "Quartr",
+    "category": "AGGREGATOR"
+  },
+  {
+    "origin": "https://bot-auth.production.raptive.com/.well-known/http-message-signatures-directory",
+    "url": "https://bot-auth.production.raptive.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:12.243954+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=300",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "v-WyNPk8ZpEgKoVGz43R18t88b-XrqotGT5hRxInBNo",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Raptive Site Inspector",
+    "operator": "Raptive",
+    "category": "ADVERTISING_AND_MARKETING"
+  },
+  {
+    "origin": "https://bot.redactus.co.uk/.well-known/http-message-signatures-directory",
+    "url": "https://bot.redactus.co.uk/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:13.295444+00:00",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=300",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "4Riht9HIuWzkSZExY2eAu79KoGVtSu_6CZ892gbkMQ4",
+        "thumbprint": "4Riht9HIuWzkSZExY2eAu79KoGVtSu_6CZ892gbkMQ4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Redactus Web Classifier",
+    "operator": "Redactus",
+    "category": "SECURITY"
+  },
+  {
+    "origin": "https://redirect.pizza/.well-known/http-message-signatures-directory",
+    "url": "https://redirect.pizza/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:13.631965+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "no-cache, private",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "Vd4rmrLbHWCA258yOZbKs6n8cIssz7VYX4Se_cNqAqk",
+        "thumbprint": "Vd4rmrLbHWCA258yOZbKs6n8cIssz7VYX4Se_cNqAqk",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "redirect.pizza destination monitor",
+    "operator": "Enflow B.V.",
+    "category": "MONITORING_AND_ANALYTICS"
+  },
+  {
+    "origin": "https://rye.xyz/.well-known/http-message-signatures-directory",
+    "url": "https://rye.xyz/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:14.058995+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "pruQTAkOsxc3Jgyewz0ladvjlgLp8iqe22EVSGJHEGg",
+        "thumbprint": "pruQTAkOsxc3Jgyewz0ladvjlgLp8iqe22EVSGJHEGg",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1761116807,
+        "nbf_unit": "seconds",
+        "exp": 1792652807,
+        "exp_unit": "seconds",
+        "days_until_exp": 29.8
+      }
+    ],
+    "purpose": "Agentic Checkout",
+    "signature_agent": "https://rye.xyz",
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "RyeBot",
+    "operator": "Rye",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://scientific-advisor.com/.well-known/http-message-signatures-directory",
+    "url": "https://scientific-advisor.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:18.323474+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "4ERoymLXfMw3D1zpSOgeR_b17-UPkPBb52F6c334mlI",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "ScientificAdvisorBot",
+    "operator": "Scientific Advisor",
+    "category": "ACADEMIC_RESEARCH"
+  },
+  {
+    "origin": "https://www.sourcedashboard.co.uk/.well-known/http-message-signatures-directory",
+    "url": "https://www.sourcedashboard.co.uk/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:18.654276+00:00",
+    "error": "ConnectError: [Errno 8] nodename nor servname provided, or not known",
+    "name": "sourcedash",
+    "operator": "Source Dashboard",
+    "category": "SEARCH_ENGINE_CRAWLER"
+  },
+  {
+    "origin": "https://www.spyglasses.io/.well-known/http-message-signatures-directory",
+    "url": "https://www.spyglasses.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:18.828076+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "33ADskUIGpEdSpRcln3JPYnwSVgvssBLqDeos5dZkSE",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Spyglasses",
+    "operator": "Spyglasses",
+    "category": "SEARCH_ENGINE_OPTIMIZATION"
+  },
+  {
+    "origin": "https://signatures.cardsavr.io/.well-known/http-message-signatures-directory",
+    "url": "https://signatures.cardsavr.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:19.393420+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 2,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "kjDYjuHvQbyZu4c4YyzRTI5I1_GAUMmKk3_e0hV-UJ0",
+        "thumbprint": "kjDYjuHvQbyZu4c4YyzRTI5I1_GAUMmKk3_e0hV-UJ0",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1784924915,
+        "nbf_unit": "seconds",
+        "exp": 2100284915,
+        "exp_unit": "seconds",
+        "days_until_exp": 3590.3
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "RrKZEzWC2GNXkoxngraQsWugImRYvPqs6Vt722Kvp9w",
+        "thumbprint": "RrKZEzWC2GNXkoxngraQsWugImRYvPqs6Vt722Kvp9w",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1784924915,
+        "nbf_unit": "seconds",
+        "exp": 2100284915,
+        "exp_unit": "seconds",
+        "days_until_exp": 3590.3
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 2,
+    "name": "Strivve Automation",
+    "operator": "Strivve",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://diamonds.tno.nl/.well-known/http-message-signatures-directory",
+    "url": "https://diamonds.tno.nl/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:21.629765+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400, public",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "1HXQ1mDP8S1pdbmRqTrtvfBZCV7l4lsSsa15_GPOrAU",
+        "thumbprint": "1HXQ1mDP8S1pdbmRqTrtvfBZCV7l4lsSsa15_GPOrAU",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "TNOThesisCrawler",
+    "operator": "TNO",
+    "category": "ACADEMIC_RESEARCH"
+  },
+  {
+    "origin": "https://vagent.trustlink360.com/.well-known/http-message-signatures-directory",
+    "url": "https://vagent.trustlink360.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:22.047610+00:00",
+    "status": 200,
+    "content_type": "application/json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "TNCK2ShVTIZ3EScqWViv7GB2nwcl9IIbVx7yxgNijMo",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "TrustLink-VerificationAgent",
+    "operator": "Pearl Industry Network LLC",
+    "category": "SECURITY"
+  },
+  {
+    "origin": "https://signature-agents.twin.so/.well-known/http-message-signatures-directory",
+    "url": "https://signature-agents.twin.so/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:22.261591+00:00",
+    "error": "ConnectError: [Errno 8] nodename nor servname provided, or not known",
+    "name": "TwinAgent",
+    "operator": "Twin",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://www.urlert.com/.well-known/http-message-signatures-directory",
+    "url": "https://www.urlert.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:22.272190+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public,max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "RIERmgGz-5AO7WqdMyjl4TJ4WTN040PZbzmW-tnVsL8",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "URLertBot",
+    "operator": "URLert",
+    "category": "SECURITY"
+  },
+  {
+    "origin": "https://visually.io/.well-known/http-message-signatures-directory",
+    "url": "https://visually.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:22.594390+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "fmhbszwgFdOwiIsMh2w4qMKe_WEJ3a_v6B-MV-NXmU4",
+        "thumbprint": "fmhbszwgFdOwiIsMh2w4qMKe_WEJ3a_v6B-MV-NXmU4",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": "signed-agent",
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Visually.io Shopify Editor",
+    "operator": "Visually.io",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://windowsforum.com/.well-known/http-message-signatures-directory/index.json",
+    "url": "https://windowsforum.com/.well-known/http-message-signatures-directory/index.json",
+    "at_origin_root": false,
+    "checked_at": "2026-09-22T13:01:23.120438+00:00",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "cache_control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+    "name": "WindowsForum-AI",
+    "operator": "WindowsForum.com",
+    "category": "SEARCH_ENGINE_CRAWLER"
+  },
+  {
+    "origin": "https://ecp.yusercontent.com/.well-known/http-message-signatures-directory",
+    "url": "https://ecp.yusercontent.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:23.247993+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=3600",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "t3s0EQWUNsGG4cv5ulZBqKhKOhZGWlutQIjUAB-ntnY",
+        "thumbprint": "t3s0EQWUNsGG4cv5ulZBqKhKOhZGWlutQIjUAB-ntnY",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "YahooMailProxy (WBA)",
+    "operator": "Yahoo",
+    "category": "PAGE_PREVIEW"
+  },
+  {
+    "origin": "https://bot-signature.gregoryscottdev.com/.well-known/http-message-signatures-directory",
+    "url": "https://bot-signature.gregoryscottdev.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:23.590371+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=86400",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "wXnGqT-nn_k61M3Nf0ujho8AIfWeCd-Uaw40XGZ2quI",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "YGS Group Falconer Scraper",
+    "operator": null,
+    "category": "AI_CRAWLER"
+  },
+  {
+    "origin": "https://you.com/.well-known/http-message-signatures-directory",
+    "url": "https://you.com/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:24.374866+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=300",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "5hbjTA0RjjhxRRquk32fSeRWfTgAdSHCZMK1afI1qvI",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "YouBot",
+    "operator": "You.com",
+    "category": "SEARCH_ENGINE_CRAWLER"
+  },
+  {
+    "origin": "https://app.zipchat.ai/.well-known/http-message-signatures-directory",
+    "url": "https://app.zipchat.ai/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:24.739230+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "max-age=3600, public",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "28vle-P0wrtC-pdMQxGAxnYh74pVTG0wR9rEA9q6utQ",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "ZipchatBot",
+    "operator": "Zipchat Inc",
+    "category": "AI_ASSISTANT"
+  },
+  {
+    "origin": "https://fetch-bot.zvelo.io/.well-known/http-message-signatures-directory",
+    "url": "https://fetch-bot.zvelo.io/.well-known/http-message-signatures-directory",
+    "at_origin_root": true,
+    "checked_at": "2026-09-22T13:01:25.175912+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": null,
+        "thumbprint": "D_RtHM9uBVqW-JpNQG-_ioMzFZwjicewpLOubh8Y0Ck",
+        "kid_matches_thumbprint": null,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": null,
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1,
+    "name": "Zvelo",
+    "operator": "zvelo",
+    "category": "MONITORING_AND_ANALYTICS"
+  }
+]

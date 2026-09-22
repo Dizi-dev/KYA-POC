@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # One command that proves the gateway works. Writes everything to evidence/.
 #   scripts/verify.sh            offline: spec vectors, unit, security, interop, demo
-#   scripts/verify.sh --network  also live Cloudflare server, real key directories, survey
+#   scripts/verify.sh --network  also live Cloudflare server, real key directories, surveys,
+#                                production-mode walkthrough, drift check
 # Exit code is non-zero if any step fails. evidence/SUMMARY.md is the human-readable result.
 set -uo pipefail
 cd "$(dirname "$0")/.."
@@ -40,6 +41,7 @@ if [[ $NETWORK == 1 ]]; then
   step "Live network checks" pytest-network.log env KYA_NETWORK=1 python -m pytest -q -m network -rs --junitxml="$EV/pytest-network.xml"
   step "Key directory survey" survey.log python -m research.survey_directories --out "$EV/directory_survey.json"
   step "Survey of every registered signed agent" signed_agents_survey.log python -m research.survey_directories --dataset --out "$EV/signed_agents_survey.json"
+  step "Production-mode walkthrough against live ChatGPT/Google directories" walkthrough.log python -m examples.walkthrough --evidence "$EV/walkthrough.json"
   step "Drift check of baseline surprises" drift.log python -m research.drift_check --out "$EV/drift.json"
 fi
 
