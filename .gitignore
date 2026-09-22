@@ -7,3 +7,4 @@ interop/js/package-lock.json
 dashboard_snapshot.html
 interop/rust/target/
 walkthrough_audit.db
+live_audit.db
