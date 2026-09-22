@@ -34,12 +34,22 @@ python -m demo.run_demo      # end-to-end demo; exits non-zero if any decision i
  6. Scraper sends 'GPTBot' User-Agent, no signature 403 outcome=unsigned   decision=block
  7. Unknown agent, directory offline (try 3)       429  outcome=unverified decision=rate_limit
  8. Human with a normal browser                    200  outcome=unsigned   decision=allow
-Audit chain: 10 entries, chain intact
+ 9. Acme rotates: request signed with NEW key      200  outcome=verified   decision=allow
+ 9. Acme rotates: OLD key still published          200  outcome=verified   decision=allow
+ 9. OLD key after Acme removed it (cache expired)  429  outcome=unverified decision=rate_limit
+Audit chain: 13 entries, chain intact
 After editing entry 5 in the database: chain broken at entry 5
 ```
 
-To browse the dashboard: `uvicorn demo.store:app --port 8000`, send some traffic, open
-`http://127.0.0.1:8000/_kya/dashboard`. The demo also writes `dashboard_snapshot.html`.
+Production-mode example against the live ChatGPT and Google key directories (needs internet):
+`python -m examples.walkthrough`. The integration itself is `examples/my_shop.py`.
+
+Admin endpoints (`/_kya/dashboard`, `/_kya/audit.json`, `/_kya/verify-chain`) need
+`Authorization: Bearer $KYA_ADMIN_TOKEN`. If `KYA_ADMIN_TOKEN` is unset they return 404.
+To browse the dashboard:
+`KYA_ADMIN_TOKEN=change-me uvicorn demo.store:app --port 8000`, send some traffic, then
+`curl -H "Authorization: Bearer change-me" http://127.0.0.1:8000/_kya/dashboard > d.html`.
+The demo also writes `dashboard_snapshot.html`.
 
 ## Use it in your own FastAPI app
 
@@ -52,6 +62,7 @@ app.add_middleware(KYAMiddleware,
                    policy=PolicyEngine.from_yaml("policy.yaml"),
                    audit=AuditLog("kya_audit.db"),
                    log_only=True)   # start in log-only mode with design partners
+# set KYA_ADMIN_TOKEN to enable /_kya/*
 ```
 
 ## How it works
@@ -70,7 +81,10 @@ app.add_middleware(KYAMiddleware,
 | --- | --- |
 | `tests/` | `test_ietf_vectors.py` (spec + security), `test_interop.py` (Cloudflare library, live server, real directories) |
 | `interop/js/` | Cloudflare's `web-bot-auth` 0.2.0 signer and verifier, used as the reference implementation |
-| `research/` | `survey_directories.py`: which operators publish key directories |
+| `interop/rust/` | Cross-check CLI around Cloudflare's Rust crate `web-bot-auth` 0.7.0 (tests skip without cargo) |
+| `research/` | `survey_directories.py` (who publishes key directories, `--dataset` for every Radar-registered signer), `drift_check.py`, `FINDINGS.md` |
+| `bench/` | `verify_bench.py`: verifier latency, writes `evidence/bench.json` |
+| `examples/` | `my_shop.py` (production integration), `walkthrough.py` (live-directory walkthrough) |
 | `scripts/verify.sh` | Runs everything and writes `evidence/` |
 | `docs/` | Context, baseline findings, longer roadmap |
 
@@ -84,6 +98,9 @@ HMAC rejected, the RFC 9421 test key rejected outside `dev_mode`.
 - RSA-PSS keys (Ed25519 only), the `cimd` discovery type, signed directory responses
 - KYAPay JWT and AP2 mandate adapters
 - Nonce store and rate limiter are in-memory, so single process only (use Redis in production)
+- Directory fetches are synchronous and block the event loop (D3); with ChatGPT's `no-store`
+  directory that is a live fetch (median ~340 ms) on every ChatGPT request. Fix before production.
+- Behind a reverse proxy, pass the real client address: rate limits key on `request.client`
 - The `charge` action returns 402 with a price; it does not collect payment
 - Audit log proves edits happened; it does not stop someone deleting the whole file
   (next step: periodically publish the latest hash somewhere external)

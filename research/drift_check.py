@@ -59,7 +59,22 @@ def main() -> int:
                                 "kids": [k.get("kid") for k in gpt.get("keys", [])]},
                    "still_holds": "no-store" in cc and any(5 <= d <= 8 for d in days)})
 
-    out = {"checked_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "checks": checks}
+    # Not a baseline surprise, but it drives the D3 priority: with no-store, every ChatGPT
+    # request needs this fetch (gateway code path, fresh connection each time as in the POC).
+    from kya_gateway.keys import KeyResolver
+    r = KeyResolver()
+    url = r._fetch_url("https://chatgpt.com", "directory")
+    lat = []
+    for _ in range(10):
+        t0 = time.perf_counter()
+        r._fetch(url)
+        lat.append(round((time.perf_counter() - t0) * 1000))
+    lat.sort()
+    fetch = {"url": url, "samples_ms": lat, "median_ms": lat[len(lat) // 2], "max_ms": lat[-1]}
+    print(f"ChatGPT directory fetch latency: median {fetch['median_ms']} ms, max {fetch['max_ms']} ms")
+
+    out = {"checked_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "checks": checks,
+           "chatgpt_directory_fetch": fetch}
     with open(args.out, "w") as f:
         json.dump(out, f, indent=2)
     for c in checks:
