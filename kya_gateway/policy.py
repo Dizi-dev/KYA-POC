@@ -5,6 +5,7 @@ import fnmatch
 import time
 from collections import defaultdict, deque
 from dataclasses import dataclass
+from urllib.parse import urlsplit
 
 import yaml
 
@@ -43,7 +44,7 @@ class PolicyEngine:
             return False
         if "tag" in m and res.tag not in _as_list(m["tag"]):
             return False
-        if "operator" in m and not any(o in (res.operator or "") for o in _as_list(m["operator"])):
+        if "operator" in m and not any(_operator_matches(o, res.operator) for o in _as_list(m["operator"])):
             return False
         if "path" in m and not any(fnmatch.fnmatch(path, p) for p in _as_list(m["path"])):
             return False
@@ -79,6 +80,34 @@ class PolicyEngine:
                 hits.append(now)
                 return Decision("allow", name, 200, "within rate limit")
         return Decision(self.default_action, "default", 200 if self.default_action == "allow" else 403)
+
+
+def _origin(url: str) -> tuple[str, str, int | None] | None:
+    try:
+        p = urlsplit(url)
+        return (p.scheme.lower(), (p.hostname or "").lower(), p.port) if p.hostname else None
+    except ValueError:
+        return None
+
+
+def _operator_matches(rule_value: str, operator: str | None) -> bool:
+    """Exact matching only. The old substring match let a directory at
+    https://acme.com.attacker.io/... satisfy a rule for "acme.com" (review finding E1).
+    Accepted rule values: "static:<label>" (exact), a full directory URL (exact), an origin
+    "https://acme.com" (same scheme, host and port), or a bare host "acme.com" (same host)."""
+    if not operator:
+        return False
+    if rule_value.startswith("static:") or operator.startswith("static:"):
+        return rule_value == operator
+    if rule_value == operator:
+        return True
+    op = _origin(operator)
+    if op is None:
+        return False
+    if "://" in rule_value:
+        rv = _origin(rule_value)
+        return rv is not None and rv == op
+    return rule_value.lower().rstrip(".") == op[1]
 
 
 def _bucket_id(res: VerificationResult, client_key: str | None) -> str:

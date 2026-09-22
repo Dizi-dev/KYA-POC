@@ -54,6 +54,15 @@ def _seconds(ts: float) -> float:
     return ts / 1000 if ts > 1e11 else ts
 
 
+def _same_origin_or_url(url: str, allowed: str) -> bool:
+    if url == allowed:
+        return True
+    a, u = urlsplit(allowed), urlsplit(url)
+    if a.path not in ("", "/"):
+        return False           # an allowlisted full URL must match exactly
+    return (a.scheme, (a.hostname or "").lower(), a.port) == (u.scheme, (u.hostname or "").lower(), u.port)
+
+
 def directory_ttl(cache_control: str, default_ttl_s: int, cap_s: int = 86_400) -> float:
     """Seconds a fetched directory may be reused (draft Appendix A.4: "use normal HTTP caching
     semantics"; RFC 9111 section 5.2.2). no-store and no-cache both mean "do not reuse without
@@ -156,8 +165,10 @@ class KeyResolver:
             url = urlunsplit((parts.scheme, parts.netloc, WELL_KNOWN, "", ""))
         else:
             raise KeyNotFound(f"discovery type {agent_type!r} not supported in POC")
+        # Review finding E2: a prefix match let "https://acme.com" admit
+        # "https://acme.com.attacker.io". Compare origins (or full URLs) exactly instead.
         if self.allowed_directories is not None and not any(
-                url.startswith(a) for a in self.allowed_directories):
+                _same_origin_or_url(url, a) for a in self.allowed_directories):
             raise KeyNotFound("directory not on the allowlist")
         return url
 

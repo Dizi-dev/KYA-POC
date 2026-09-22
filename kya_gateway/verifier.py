@@ -111,6 +111,12 @@ class Verifier:
             base.outcome, base.reason = outcome, reason
             return base
 
+        # Review finding E3: wrong-typed parameters used to raise (TypeError/AttributeError),
+        # giving a 500 and no audit row. RFC 9421 section 2.3 fixes the types.
+        for name, typ in (("created", int), ("expires", int), ("keyid", str), ("alg", str),
+                          ("nonce", str), ("tag", str)):
+            if name in p and (not isinstance(p[name], typ) or isinstance(p[name], bool)):
+                return fail(Outcome.INVALID, f"{name} has the wrong type")
         if tag not in self.accepted_tags:
             return fail(Outcome.UNVERIFIED, f"tag {tag!r} not accepted")
         for required in ("created", "expires", "keyid"):
