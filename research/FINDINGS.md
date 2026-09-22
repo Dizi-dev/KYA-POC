@@ -1,12 +1,12 @@
 # Research findings (22 September 2026)
 
-Every finding can be reproduced with `scripts/verify.sh --network` (last run 2026-09-22T13:01Z,
-commit 2174b1e, `evidence/SUMMARY.md` = PASS) or with the single command listed.
+Every finding can be reproduced with `scripts/verify.sh --network` (last run 2026-09-22T13:06Z,
+commit 5ff70ab, `evidence/SUMMARY.md` = PASS) or with the single command listed.
 
 ## R1: who signs today
 
 **Command:** `python -m research.survey_directories --dataset --out evidence/signed_agents_survey.json`
-**Evidence:** `evidence/signed_agents_survey.json`, `evidence/signed_agents_survey.log` (checked 2026-09-22T13:00Z)
+**Evidence:** `evidence/signed_agents_survey.json`, `evidence/signed_agents_survey.log` (checked 2026-09-22T13:05Z)
 
 - The Cloudflare Radar mirror lists **705 bots; 96 name a Web Bot Auth key directory**.
 - **87 of those 96 load cleanly in the gateway under production rules** (HTTPS, public IPs,
@@ -60,7 +60,7 @@ all three tags.
 ## R3: drift check
 
 **Command:** `python -m research.drift_check --out evidence/drift.json`
-**Evidence:** `evidence/drift.json` (checked 2026-09-22T13:03Z) and `evidence/drift.log`
+**Evidence:** `evidence/drift.json` (checked 2026-09-22T13:06Z) and `evidence/drift.log`
 
 | Baseline surprise | Still holds? | Observed |
 | --- | --- | --- |
@@ -74,16 +74,16 @@ so the milliseconds heuristic in `keys.py` matters beyond Cloudflare's test serv
 ## R4: verifier cost
 
 **Command:** `python -m bench.verify_bench --out evidence/bench.json`
-**Evidence:** `evidence/bench.json` (measured 2026-09-22T12:59Z, Apple M4 Pro, Python 3.14.7)
+**Evidence:** `evidence/bench.json` (measured 2026-09-22T13:04Z, Apple M4 Pro, Python 3.14.7)
 
-- 10,000 verifications with a cached key: **p50 0.176 ms, p95 0.204 ms**, about 5,400 per
+- 10,000 verifications with a cached key: **p50 0.171 ms, p95 0.201 ms**, about 5,700 per
   second on one core. Meets the ROADMAP target of p95 < 1 ms.
 - **Before fix E5**, latency grew with the number of stored nonces: 0.20 ms → 0.97 ms after
   20,000 requests. The replay store rescanned itself on every request; it is now a heap.
 - **Uncached cost is far higher and dominates in practice.** A live fetch of ChatGPT's
-  directory through the gateway's code path took **median 339 ms, max 958 ms** (10 samples,
-  `evidence/drift.json` → `chatgpt_directory_fetch`, 2026-09-22T13:03Z; an earlier manual run
-  gave median 403 ms). ChatGPT sends `no-store`, so every ChatGPT request pays this. The POC
+  directory through the gateway's code path took **median 431 ms, max 1,035 ms** (10 samples,
+  `evidence/drift.json` → `chatgpt_directory_fetch`, 2026-09-22T13:06Z; earlier runs gave
+  medians of 339 ms and 403 ms). ChatGPT sends `no-store`, so every ChatGPT request pays this. The POC
   fetches synchronously inside the event loop (D3), so it stalls all other requests during
   that time.
 

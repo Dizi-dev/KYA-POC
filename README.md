@@ -99,7 +99,7 @@ HMAC rejected, the RFC 9421 test key rejected outside `dev_mode`.
 - KYAPay JWT and AP2 mandate adapters
 - Nonce store and rate limiter are in-memory, so single process only (use Redis in production)
 - Directory fetches are synchronous and block the event loop (D3); with ChatGPT's `no-store`
-  directory that is a live fetch (median ~340 ms) on every ChatGPT request. Fix before production.
+  directory that is a live fetch (medians of 340 to 430 ms measured) on every ChatGPT request. Fix before production.
 - Behind a reverse proxy, pass the real client address: rate limits key on `request.client`
 - The `charge` action returns 402 with a price; it does not collect payment
 - Audit log proves edits happened; it does not stop someone deleting the whole file

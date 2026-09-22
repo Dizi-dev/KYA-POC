@@ -71,7 +71,10 @@ def directory_ttl(cache_control: str, default_ttl_s: int, cap_s: int = 86_400) -
     semantics"; RFC 9111 section 5.2.2). no-store and no-cache both mean "do not reuse without
     going back to the origin"; the POC has no conditional requests (ETag) yet, so no-cache is
     treated like no-store, i.e. a fresh fetch per verification (stricter reading).
-    max-age wins over the default; a missing header uses the default TTL."""
+    max-age wins over the default; a missing header uses the default TTL.
+    SPEC-QUESTION: A.4 says only "use normal HTTP caching semantics". Honouring no-store
+    literally means a live fetch per request for ChatGPT (median 340 to 430 ms measured); a
+    short floor (e.g. a few seconds) would be kinder but is not what the header says."""
     directives = {}
     for part in cache_control.lower().split(","):
         name, _, value = part.strip().partition("=")
