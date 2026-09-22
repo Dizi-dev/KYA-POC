@@ -9,7 +9,8 @@ from kya_gateway.middleware import KYAMiddleware
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
-def build_app(db_path: str = "kya_audit.db", dev_mode: bool = True, log_only: bool = False) -> FastAPI:
+def build_app(db_path: str = "kya_audit.db", dev_mode: bool = True, log_only: bool = False,
+              admin_token: str | None = None) -> FastAPI:
     app = FastAPI(title="Demo store")
 
     @app.get("/products/{pid}")
@@ -28,7 +29,8 @@ def build_app(db_path: str = "kya_audit.db", dev_mode: bool = True, log_only: bo
     verifier = Verifier(KeyResolver(dev_mode=dev_mode))
     policy = PolicyEngine.from_yaml(os.path.join(HERE, "..", "policy.yaml"))
     app.add_middleware(KYAMiddleware, verifier=verifier, policy=policy,
-                       audit=AuditLog(db_path), log_only=log_only)
+                       audit=AuditLog(db_path), log_only=log_only,
+                       admin_token=admin_token or os.environ.get("KYA_ADMIN_TOKEN"))
     return app
 
 

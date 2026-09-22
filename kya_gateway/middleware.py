@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import hmac
 import html
 import ipaddress
 import json
@@ -39,11 +40,18 @@ def client_key(host: str | None) -> str:
     return hashlib.sha256(_CLIENT_SALT + material.encode()).hexdigest()[:16]
 
 
+_UNSET = object()
+
+
 class KYAMiddleware(BaseHTTPMiddleware):
     def __init__(self, app, *, verifier: Verifier, policy: PolicyEngine, audit: AuditLog,
-                 log_only: bool = False):
+                 log_only: bool = False, admin_token: str | None | object = _UNSET):
+        """admin_token: bearer token for /_kya/*. Defaults to $KYA_ADMIN_TOKEN. When no token is
+        configured the admin endpoints do not exist (404), so a fresh install exposes nothing."""
         super().__init__(app)
         self.verifier, self.policy, self.audit, self.log_only = verifier, policy, audit, log_only
+        token = os.environ.get("KYA_ADMIN_TOKEN") if admin_token is _UNSET else admin_token
+        self.admin_token: str | None = token or None
 
     async def dispatch(self, request: StarletteRequest, call_next):
         if request.url.path.startswith(PREFIX):
@@ -75,6 +83,14 @@ class KYAMiddleware(BaseHTTPMiddleware):
 
     # -- admin endpoints -------------------------------------------------------
     def _admin(self, request: StarletteRequest) -> Response:
+        not_found = JSONResponse({"error": "not found"}, status_code=404)
+        if not self.admin_token:
+            return not_found
+        scheme, _, supplied = request.headers.get("authorization", "").partition(" ")
+        if scheme.lower() != "bearer" or not hmac.compare_digest(
+                supplied.strip().encode(), self.admin_token.encode()):
+            return JSONResponse({"error": "unauthorized"}, status_code=401,
+                                headers={"WWW-Authenticate": "Bearer"})
         path = request.url.path
         if path == f"{PREFIX}/audit.json":
             return Response(self.audit.export_json(), media_type="application/json")
@@ -83,7 +99,7 @@ class KYAMiddleware(BaseHTTPMiddleware):
             return JSONResponse({"intact": ok, "detail": msg})
         if path == f"{PREFIX}/dashboard":
             return HTMLResponse(render_dashboard(self.audit))
-        return JSONResponse({"error": "not found"}, status_code=404)
+        return not_found
 
 
 def render_dashboard(audit: AuditLog) -> str:

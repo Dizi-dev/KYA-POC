@@ -3,7 +3,8 @@ eight kinds of traffic and shows what the gateway decided for each.
 
     python -m demo.run_demo [--evidence evidence/demo.json]
 Exits non-zero if any gateway decision differs from EXPECTED or tampering goes undetected.
-Dashboard afterwards: python -m uvicorn demo.store:app --port 8000, open /_kya/dashboard
+Dashboard afterwards: KYA_ADMIN_TOKEN=... python -m uvicorn demo.store:app --port 8000, then
+GET /_kya/dashboard with "Authorization: Bearer <token>"
 """
 import json
 import os
@@ -24,6 +25,8 @@ from kya_gateway.signer import sign_request
 STORE = "http://127.0.0.1:8000"
 ACME_DIR = "http://127.0.0.1:8001"       # dev mode: plain http on localhost
 DB = "demo_audit.db"
+ADMIN_TOKEN = "demo-admin-token"          # /_kya/* needs a bearer token (D2)
+ADMIN = {"Authorization": f"Bearer {ADMIN_TOKEN}"}
 
 
 def serve(app, port, probe="/openapi.json"):
@@ -58,7 +61,7 @@ def show(n, label, r):
 def main():
     if os.path.exists(DB):
         os.remove(DB)
-    store_app = build_app(db_path=DB)
+    store_app = build_app(db_path=DB, admin_token=ADMIN_TOKEN)
     serve(agent_directory.app, 8001)
     serve(store_app, 8000, probe="/_kya/verify-chain")   # admin paths are not logged
     acme = agent_directory.ACME_KEY
@@ -96,12 +99,12 @@ def main():
 
     show(8, "Human with a normal browser", c.get("/products/42", headers={"User-Agent": "Mozilla/5.0 Firefox/131.0"}))
 
-    before = c.get("/_kya/verify-chain").json()
+    before = c.get("/_kya/verify-chain", headers=ADMIN).json()
     print("\nAudit chain:", before["detail"])
     db = sqlite3.connect(DB)
     db.execute("UPDATE audit SET decision='allow' WHERE id=5")   # try to hide the forgery
     db.commit()
-    after = c.get("/_kya/verify-chain").json()
+    after = c.get("/_kya/verify-chain", headers=ADMIN).json()
     print("After editing entry 5 in the database:", after["detail"])
 
     from kya_gateway.audit import AuditLog
