@@ -1,0 +1,31 @@
+# First matching rule wins. Outcomes: unsigned, verified, invalid, unverified.
+default: allow
+rules:
+  - name: block-invalid-signatures
+    match: {outcome: invalid}
+    action: block
+    message: signature failed verification
+
+  - name: block-spoofed-ai-agents        # claims to be a known AI agent, but did not sign
+    match: {outcome: unsigned, user_agent_contains: [GPTBot, ClaudeBot, PerplexityBot, Google-Extended]}
+    action: block
+    message: known AI agents must sign requests (Web Bot Auth)
+
+  - name: verified-payer-checkout        # Visa TAP payment-intent tag
+    match: {outcome: verified, tag: agent-payer-auth, path: "/checkout*"}
+    action: allow
+
+  - name: charge-agents-for-price-api    # the crawler idea, as one policy
+    match: {outcome: verified, path: "/api/*"}
+    action: charge
+    price: "0.002 USD"
+
+  - name: verified-agents-browse
+    match: {outcome: verified}
+    action: allow
+
+  - name: limit-unverified
+    match: {outcome: unverified}
+    action: rate_limit
+    limit: 2
+    window_s: 60

@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+.pytest_cache/
+interop/js/node_modules/
+interop/js/package-lock.json
+*.db
+dashboard_snapshot.html

@@ -1,0 +1,7 @@
+{
+  "name": "kya-interop",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare's reference web-bot-auth library, used to cross-check our signer and verifier",
+  "dependencies": { "web-bot-auth": "0.2.0" }
+}

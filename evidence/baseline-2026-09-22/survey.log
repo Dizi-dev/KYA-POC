@@ -1,0 +1,24 @@
+origin                                                             status keys gateway
+https://chatgpt.com                                                   200    1 ok
+https://openai.com                                                    404    - -
+https://anthropic.com                                                 301    - -
+https://www.anthropic.com  (redirect target)                          404    - -
+https://claude.ai                                                     404    - -
+https://perplexity.ai                                                 301    - -
+https://www.perplexity.ai:443  (redirect target)                      404    - -
+https://google.com                                                    404    - -
+https://bing.com                                                      301    - -
+https://amazon.com                                                    301    - -
+https://www.amazon.com  (redirect target)                             503    - -
+https://cloudflare.com                                                301    - -
+https://www.cloudflare.com  (redirect target)                         301    - -
+https://browserbase.com                                               301    - -
+https://www.browserbase.com  (redirect target)                        200    2 ok
+https://browser-use.com                                               404    - -
+https://manus.im                                                      404    - -
+https://skyfire.xyz                                                   403    - -
+https://visa.com                                                      301    - -
+https://www.visa.com  (redirect target)                               404    - -
+https://http-message-signatures-example.research.cloudflare.com       200    1 ok
+
+written to evidence/directory_survey.json

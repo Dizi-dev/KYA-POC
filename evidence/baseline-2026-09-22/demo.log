@@ -1,0 +1,19 @@
+
+Request                                          HTTP  gateway result
+------------------------------------------------------------------------------------------------
+ 1. Acme agent browses a product (signed)          200  outcome=verified   decision=allow
+ 2. Acme agent checks out (TAP agent-payer-auth)   200  outcome=verified   decision=allow
+ 3. Acme agent pulls the price API (signed)        402  outcome=verified   decision=charge
+ 4. Attacker replays request 1 headers             403  outcome=invalid    decision=block
+ 5. Attacker forges Acme's identity                403  outcome=invalid    decision=block
+ 6. Scraper sends 'GPTBot' User-Agent, no signature 403  outcome=unsigned   decision=block
+ 7. Unknown agent, directory offline (try 1)       200  outcome=unverified decision=allow
+ 7. Unknown agent, directory offline (try 2)       200  outcome=unverified decision=allow
+ 7. Unknown agent, directory offline (try 3)       429  outcome=unverified decision=rate_limit
+ 8. Human with a normal browser                    200  outcome=unsigned   decision=allow
+
+Audit chain: 10 entries, chain intact
+After editing entry 5 in the database: chain broken at entry 5
+Dashboard snapshot written to dashboard_snapshot.html
+
+DEMO CHECK: PASS
