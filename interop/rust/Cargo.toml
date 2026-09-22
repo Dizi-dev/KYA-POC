@@ -1,0 +1,11 @@
+[package]
+name = "kya-interop"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+base64 = "0.22"
+indexmap = "2"
+serde_json = "1"
+sfv = "0.13"
+web-bot-auth = "0.7.0"
