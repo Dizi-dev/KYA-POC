@@ -6,7 +6,6 @@ import base64
 import hashlib
 import ipaddress
 import json
-import re
 import socket
 import time
 from dataclasses import dataclass, field
@@ -53,6 +52,27 @@ def _seconds(ts: float) -> float:
     seconds are treated as milliseconds.
     SPEC-QUESTION: the draft does not state the unit for directory nbf/exp."""
     return ts / 1000 if ts > 1e11 else ts
+
+
+def directory_ttl(cache_control: str, default_ttl_s: int, cap_s: int = 86_400) -> float:
+    """Seconds a fetched directory may be reused (draft Appendix A.4: "use normal HTTP caching
+    semantics"; RFC 9111 section 5.2.2). no-store and no-cache both mean "do not reuse without
+    going back to the origin"; the POC has no conditional requests (ETag) yet, so no-cache is
+    treated like no-store, i.e. a fresh fetch per verification (stricter reading).
+    max-age wins over the default; a missing header uses the default TTL."""
+    directives = {}
+    for part in cache_control.lower().split(","):
+        name, _, value = part.strip().partition("=")
+        if name:
+            directives[name] = value.strip().strip('"')
+    if "no-store" in directives or "no-cache" in directives:
+        return 0.0
+    if "max-age" in directives:
+        try:
+            return float(min(max(int(directives["max-age"]), 0), cap_s))
+        except ValueError:
+            return 0.0      # RFC 9111 5.2.2.1: invalid max-age -> treat as stale
+    return float(default_ttl_s)
 
 
 def jwk_to_public_key(jwk: dict) -> Ed25519PublicKey:
@@ -107,7 +127,7 @@ class KeyResolver:
 
         fetch_url = self._fetch_url(agent_url, agent_type)
         entry = self._cache.get(fetch_url)
-        if entry is None or entry.expires_at < time.time():
+        if entry is None or entry.expires_at <= time.time():
             entry = self._fetch(fetch_url)
             self._cache[fetch_url] = entry
         if entry.error:
@@ -177,8 +197,7 @@ class KeyResolver:
                     keys[jwk_thumbprint(jwk)] = jwk
                 except (ValueError, KeyError):
                     continue   # skip unsupported key types
-            m = re.search(r"max-age=(\d+)", cache_control)
-            ttl = min(int(m.group(1)), 86_400) if m else self.default_ttl_s
+            ttl = directory_ttl(cache_control, self.default_ttl_s)
             return _CacheEntry(expires_at=time.time() + ttl, keys=keys)
         except (KeyNotFound, httpx.HTTPError, ValueError) as exc:
             return _CacheEntry(expires_at=time.time() + self.negative_ttl_s, error=str(exc))
