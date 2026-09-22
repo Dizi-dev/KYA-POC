@@ -1,5 +1,5 @@
 """End-to-end demo: starts the key directory and the protected store, then sends
-eight kinds of traffic and shows what the gateway decided for each.
+nine kinds of traffic (9 = key rotation) and shows what the gateway decided for each.
 
     python -m demo.run_demo [--evidence evidence/demo.json]
 Exits non-zero if any gateway decision differs from EXPECTED or tampering goes undetected.
@@ -48,11 +48,13 @@ EXPECTED = [
     (403, "invalid", "block"), (403, "invalid", "block"), (403, "unsigned", "block"),
     (200, "unverified", "allow"), (200, "unverified", "allow"), (429, "unverified", "rate_limit"),
     (200, "unsigned", "allow"),
+    (200, "verified", "allow"), (200, "verified", "allow"), (429, "unverified", "rate_limit"),
 ]
 
 
 def show(n, label, r):
-    RESULTS.append({"scenario": n, "label": label, "status": r.status_code,
+    reason = r.json().get("reason") if r.headers.get("content-type", "").startswith("application/json") else None
+    RESULTS.append({"scenario": n, "label": label, "status": r.status_code, "reason": reason,
                     "outcome": r.headers.get("KYA-Outcome"), "decision": r.headers.get("KYA-Decision")})
     print(f"{n:>2}. {label:<46} {r.status_code}  outcome={r.headers.get('KYA-Outcome', '-'):<10} "
           f"decision={r.headers.get('KYA-Decision', '-')}")
@@ -99,6 +101,22 @@ def main():
 
     show(8, "Human with a normal browser", c.get("/products/42", headers={"User-Agent": "Mozilla/5.0 Firefox/131.0"}))
 
+    # 9. Key rotation: Acme publishes a new key next to the old one, then retires the old one.
+    # The directory sends max-age=2, so the gateway picks up each change within 2 s (D9).
+    wait = 2.3
+    agent_directory.PUBLISHED[:] = [acme, agent_directory.ACME_NEW_KEY]
+    time.sleep(wait)
+    u = f"{STORE}/products/42"
+    show(9, "Acme rotates: request signed with NEW key",
+         c.get("/products/42", headers=sign_request("GET", u, agent_directory.ACME_NEW_KEY, ACME_DIR)))
+    show(9, "Acme rotates: OLD key still published",
+         c.get("/products/42", headers=sign_request("GET", u, acme, ACME_DIR)))
+    agent_directory.PUBLISHED[:] = [agent_directory.ACME_NEW_KEY]
+    time.sleep(wait)
+    show(9, "OLD key after Acme removed it (cache expired)",
+         c.get("/products/42", headers=sign_request("GET", u, acme, ACME_DIR)))
+    print("    (unverified -> falls to the unverified rate limit, already used by this client in 7)")
+
     before = c.get("/_kya/verify-chain", headers=ADMIN).json()
     print("\nAudit chain:", before["detail"])
     db = sqlite3.connect(DB)
@@ -120,6 +138,8 @@ def main():
                 failures.append(f"request {i}: got {g}, expected {e}")
         if len(got) != len(EXPECTED):
             failures.append(f"got {len(got)} results, expected {len(EXPECTED)}")
+    if RESULTS and "not published" not in (RESULTS[-1].get("reason") or ""):
+        failures.append("rotation: removed key was not rejected as 'keyid not published'")
     if not before["intact"]:
         failures.append("audit chain broken before tampering")
     if after["intact"] or "entry 5" not in after["detail"]:
