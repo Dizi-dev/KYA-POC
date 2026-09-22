@@ -291,3 +291,26 @@ def test_e3_non_string_tag_is_not_a_crash():
          "signature": "sig1=:AAAA:"}
     res = Verifier(KeyResolver()).verify(Request("GET", "https://example.com/", h))
     assert res.outcome in (Outcome.INVALID, Outcome.UNVERIFIED)
+
+
+# -- E4: directory fetch must accept the registered media type ------------------------------
+
+def test_e4_directory_fetch_accepts_draft_media_type():
+    """Klaviyo's live directory answers 406 to "Accept: application/json" (seen 22 Sep 2026).
+    The companion [DIRECTORY] draft (protocol draft 4.5) defines that media type."""
+    d = _Dir("max-age=60")
+    orig = d.srv.RequestHandlerClass.do_GET
+
+    def strict(self):
+        if "application/http-message-signatures-directory+json" not in self.headers.get("Accept", ""):
+            self.send_response(406)
+            self.end_headers()
+            return
+        orig(self)
+
+    d.srv.RequestHandlerClass.do_GET = strict
+    try:
+        key = KeyResolver(dev_mode=True).resolve(d.kid, d.url)
+        assert key.keyid == d.kid
+    finally:
+        d.close()

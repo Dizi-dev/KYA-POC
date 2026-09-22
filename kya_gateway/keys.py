@@ -15,6 +15,9 @@ import httpx
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 
 WELL_KNOWN = "/.well-known/http-message-signatures-directory"
+# Media type from the companion directory draft (referenced as [DIRECTORY] in section 4.5) first; plain JSON as fallback. Some live directories (Klaviyo,
+# 22 Sep 2026) return 406 to "Accept: application/json" alone (review finding E4).
+DIRECTORY_ACCEPT = "application/http-message-signatures-directory+json, application/json;q=0.9"
 
 # Ed25519 test key from RFC 9421 Appendix B.1.4, used by the draft's test vectors.
 # The draft says verifiers SHOULD reject known test keys in production.
@@ -189,7 +192,7 @@ class KeyResolver:
         try:
             self._check_host(urlsplit(url).hostname or "")
             with httpx.Client(timeout=self.timeout_s, follow_redirects=False) as client:
-                with client.stream("GET", url, headers={"accept": "application/json"}) as r:
+                with client.stream("GET", url, headers={"accept": DIRECTORY_ACCEPT}) as r:
                     if r.status_code != 200:
                         raise KeyNotFound(f"HTTP {r.status_code}")
                     body = b""
