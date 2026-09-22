@@ -1,0 +1,4 @@
+...s.                                                                    [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_interop.py:116: directory only publishes the RFC 9421 test key, which production mode rejects
+4 passed, 1 skipped, 19 deselected in 1.24s

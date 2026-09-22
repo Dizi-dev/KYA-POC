@@ -1,0 +1,239 @@
+[
+  {
+    "origin": "https://chatgpt.com",
+    "url": "https://chatgpt.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:16.954756+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "no-store, no-transform",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY",
+        "thumbprint": "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false,
+        "nbf": 1735689600,
+        "nbf_unit": "seconds",
+        "exp": 1790685977,
+        "exp_unit": "seconds",
+        "days_until_exp": 7.0
+      }
+    ],
+    "purpose": "ai",
+    "signature_agent": "https://chatgpt.com",
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  },
+  {
+    "origin": "https://openai.com",
+    "url": "https://openai.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:17.979772+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate"
+  },
+  {
+    "origin": "https://anthropic.com",
+    "url": "https://anthropic.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:18.531853+00:00",
+    "status": 301,
+    "content_type": "text/html; charset=UTF-8",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://www.anthropic.com",
+    "url": "https://www.anthropic.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:18.653271+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "redirected_from": "https://anthropic.com"
+  },
+  {
+    "origin": "https://claude.ai",
+    "url": "https://claude.ai/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:18.939023+00:00",
+    "status": 404,
+    "content_type": "text/plain; charset=UTF-8",
+    "cache_control": "no-store"
+  },
+  {
+    "origin": "https://perplexity.ai",
+    "url": "https://perplexity.ai/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:19.001835+00:00",
+    "status": 301,
+    "content_type": "text/html",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://www.perplexity.ai:443",
+    "url": "https://www.perplexity.ai:443/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:20.008197+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "cache_control": "",
+    "redirected_from": "https://perplexity.ai"
+  },
+  {
+    "origin": "https://google.com",
+    "url": "https://google.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:20.184261+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=UTF-8",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://bing.com",
+    "url": "https://bing.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:20.385481+00:00",
+    "status": 301,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "private"
+  },
+  {
+    "origin": "https://amazon.com",
+    "url": "https://amazon.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:20.654833+00:00",
+    "status": 301,
+    "content_type": "text/html",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://www.amazon.com",
+    "url": "https://www.amazon.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:21.427559+00:00",
+    "status": 404,
+    "content_type": "text/html;charset=UTF-8",
+    "cache_control": "no-cache",
+    "redirected_from": "https://amazon.com"
+  },
+  {
+    "origin": "https://cloudflare.com",
+    "url": "https://cloudflare.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:21.723873+00:00",
+    "status": 301,
+    "content_type": "text/html; charset=UTF-8",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://www.cloudflare.com",
+    "url": "https://www.cloudflare.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:21.817598+00:00",
+    "status": 301,
+    "content_type": "",
+    "cache_control": "",
+    "redirected_from": "https://cloudflare.com"
+  },
+  {
+    "origin": "https://browserbase.com",
+    "url": "https://browserbase.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:21.867277+00:00",
+    "status": 301,
+    "content_type": "application/json",
+    "cache_control": "public, max-age=0, must-revalidate"
+  },
+  {
+    "origin": "https://www.browserbase.com",
+    "url": "https://www.browserbase.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:22.129210+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "public, max-age=3600",
+    "key_count": 2,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "g9QW9yAMXntikfU_mMk8tRFAXeEQOcAGAwNXibApZtE",
+        "thumbprint": "g9QW9yAMXntikfU_mMk8tRFAXeEQOcAGAwNXibApZtE",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      },
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "7MsGv9qv7keRm2KnNG-mHXasHK0K1ctX9pLI3kb_8SI",
+        "thumbprint": "7MsGv9qv7keRm2KnNG-mHXasHK0K1ctX9pLI3kb_8SI",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": false
+      }
+    ],
+    "purpose": "rag",
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 2,
+    "redirected_from": "https://browserbase.com"
+  },
+  {
+    "origin": "https://browser-use.com",
+    "url": "https://browser-use.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:22.385272+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "public, max-age=0, must-revalidate"
+  },
+  {
+    "origin": "https://manus.im",
+    "url": "https://manus.im/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:22.574681+00:00",
+    "status": 404,
+    "content_type": "text/html; charset=utf-8",
+    "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate"
+  },
+  {
+    "origin": "https://skyfire.xyz",
+    "url": "https://skyfire.xyz/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:22.819031+00:00",
+    "status": 403,
+    "content_type": "text/html",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://visa.com",
+    "url": "https://visa.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:23.277487+00:00",
+    "status": 301,
+    "content_type": "text/html; charset=UTF-8",
+    "cache_control": ""
+  },
+  {
+    "origin": "https://www.visa.com",
+    "url": "https://www.visa.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:23.420689+00:00",
+    "status": 404,
+    "content_type": "text/html",
+    "cache_control": "",
+    "redirected_from": "https://visa.com"
+  },
+  {
+    "origin": "https://http-message-signatures-example.research.cloudflare.com",
+    "url": "https://http-message-signatures-example.research.cloudflare.com/.well-known/http-message-signatures-directory",
+    "checked_at": "2026-09-22T12:46:23.640547+00:00",
+    "status": 200,
+    "content_type": "application/http-message-signatures-directory+json",
+    "cache_control": "",
+    "key_count": 1,
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U",
+        "thumbprint": "poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U",
+        "kid_matches_thumbprint": true,
+        "is_rfc9421_test_key": true,
+        "nbf": 1743465600000,
+        "nbf_unit": "milliseconds?"
+      }
+    ],
+    "purpose": "rag",
+    "signature_agent": null,
+    "gateway_can_load": true,
+    "gateway_error": null,
+    "gateway_usable_keys": 1
+  }
+]
