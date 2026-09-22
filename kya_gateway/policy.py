@@ -8,7 +8,7 @@ from dataclasses import dataclass
 
 import yaml
 
-from .verifier import VerificationResult
+from .verifier import Outcome, VerificationResult
 
 ACTIONS = {"allow", "block", "rate_limit", "charge"}
 
@@ -54,7 +54,10 @@ class PolicyEngine:
             return False
         return True
 
-    def decide(self, res: VerificationResult, method: str, path: str, user_agent: str = "") -> Decision:
+    def decide(self, res: VerificationResult, method: str, path: str, user_agent: str = "",
+               client_key: str | None = None) -> Decision:
+        """client_key: opaque per-client value from the middleware (hashed IP prefix). Used to
+        bucket rate limits for traffic whose identity is not proven."""
         for rule in self.rules:
             if not self._matches(rule, res, method, path, user_agent):
                 continue
@@ -67,7 +70,7 @@ class PolicyEngine:
                 return Decision("charge", name, 402, "payment required", price=str(rule.get("price", "0.01 USD")))
             if action == "rate_limit":
                 limit, window = int(rule.get("limit", 60)), int(rule.get("window_s", 60))
-                bucket = f"{name}:{res.operator or res.keyid or 'anonymous'}"
+                bucket = f"{name}:{_bucket_id(res, client_key)}"
                 now, hits = time.time(), self._hits[bucket]
                 while hits and hits[0] < now - window:
                     hits.popleft()
@@ -76,6 +79,15 @@ class PolicyEngine:
                 hits.append(now)
                 return Decision("allow", name, 200, "within rate limit")
         return Decision(self.default_action, "default", 200 if self.default_action == "allow" else 403)
+
+
+def _bucket_id(res: VerificationResult, client_key: str | None) -> str:
+    """Only a verified operator is a trustworthy identity. For unsigned, invalid and unverified
+    traffic the keyid and Signature-Agent are attacker-chosen (D1: rotating them bypassed the
+    limit), so bucket by the client key the middleware derived from the connection."""
+    if res.outcome == Outcome.VERIFIED and res.operator:
+        return f"op:{res.operator}"
+    return f"client:{client_key or 'anonymous'}"
 
 
 def _as_list(v):

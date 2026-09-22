@@ -1,8 +1,11 @@
 """FastAPI / Starlette middleware: verify -> decide -> log, plus a small dashboard."""
 from __future__ import annotations
 
+import hashlib
 import html
+import ipaddress
 import json
+import os
 from collections import Counter
 
 from starlette.middleware.base import BaseHTTPMiddleware
@@ -15,6 +18,25 @@ from .sigbase import Request
 from .verifier import Verifier
 
 PREFIX = "/_kya"
+# Per-process salt so client keys cannot be reversed to an IP prefix from the audit log or
+# rate-limit state. Buckets reset on restart, which is fine for an in-memory limiter.
+_CLIENT_SALT = os.urandom(16)
+
+
+def client_key(host: str | None) -> str:
+    """Opaque rate-limit key for a client: salted hash of the IPv4 /24 or IPv6 /48 prefix.
+    Never the raw IP (audit and privacy rule). Behind a reverse proxy, pass the real client
+    address here; Starlette's request.client is the proxy's address unless a trusted
+    proxy-headers middleware rewrote it."""
+    try:
+        ip = ipaddress.ip_address(host or "")
+        if isinstance(ip, ipaddress.IPv6Address) and ip.ipv4_mapped:
+            ip = ip.ipv4_mapped
+        prefix = 24 if ip.version == 4 else 48
+        material = str(ipaddress.ip_network(f"{ip}/{prefix}", strict=False))
+    except ValueError:
+        material = f"host:{host or 'unknown'}"
+    return hashlib.sha256(_CLIENT_SALT + material.encode()).hexdigest()[:16]
 
 
 class KYAMiddleware(BaseHTTPMiddleware):
@@ -29,7 +51,9 @@ class KYAMiddleware(BaseHTTPMiddleware):
 
         headers = {k.lower(): v for k, v in request.headers.items()}
         res = self.verifier.verify(Request(request.method, str(request.url), headers))
-        decision = self.policy.decide(res, request.method, request.url.path, headers.get("user-agent", ""))
+        ck = client_key(request.client.host if request.client else None)
+        decision = self.policy.decide(res, request.method, request.url.path, headers.get("user-agent", ""),
+                                      client_key=ck)
         self.audit.append(method=request.method, path=request.url.path, outcome=res.outcome.value,
                           reason=res.reason, operator=res.operator, keyid=res.keyid, tag=res.tag,
                           decision=("log-only:" if self.log_only else "") + decision.action,
