@@ -52,7 +52,8 @@ class NonceStore:
 class Verifier:
     def __init__(self, resolver: KeyResolver, *, accepted_tags: set[str] | None = None,
                  max_validity_s: int = 86_400, clock_skew_s: int = 60,
-                 require_nonce: bool = False, now: Callable[[], float] = time.time):
+                 require_nonce: bool = False, now: Callable[[], float] = time.time,
+                 max_signatures: int = 3):
         self.resolver = resolver
         self.accepted_tags = accepted_tags or DEFAULT_TAGS
         self.max_validity_s = max_validity_s
@@ -60,6 +61,11 @@ class Verifier:
         self.require_nonce = require_nonce
         self.now = now
         self.nonces = NonceStore()
+        # D5: RFC 9421 section 7.2.6 leaves the choice of which signatures to process to the
+        # verifier and section 1.4 to the application profile; the draft sets no number.
+        # SPEC-QUESTION: no normative cap; we default to 3 (stricter reading). Each label can
+        # trigger its own directory fetch, so the cap is checked before any key lookup.
+        self.max_signatures = max_signatures
 
     def verify(self, req: Request) -> VerificationResult:
         sig_input_raw = req.headers.get("signature-input")
@@ -69,12 +75,21 @@ class Verifier:
         if not (sig_input_raw and sig_raw):
             return VerificationResult(Outcome.INVALID, "Signature and Signature-Input must both be present")
 
+        # Cheap pre-parse count so a header with thousands of labels is rejected before the
+        # structured-field parser or any key lookup runs. Commas inside quoted strings can only
+        # inflate the count, which errs toward rejecting (stricter reading).
+        if max(sig_input_raw.count(","), sig_raw.count(",")) + 1 > self.max_signatures * 4:
+            return VerificationResult(Outcome.INVALID, "too many signatures")
+
         inputs, sigs = http_sfv.Dictionary(), http_sfv.Dictionary()
         try:
             inputs.parse(sig_input_raw.encode())
             sigs.parse(sig_raw.encode())
         except Exception:  # noqa: BLE001
             return VerificationResult(Outcome.INVALID, "malformed signature headers")
+
+        if len(inputs) > self.max_signatures or len(sigs) > self.max_signatures:
+            return VerificationResult(Outcome.INVALID, "too many signatures")
 
         best: VerificationResult | None = None
         for label in inputs:
