@@ -34,10 +34,13 @@ fi
 
 step "End-to-end demo with expected outcomes" demo.log python -m demo.run_demo --evidence "$EV/demo.json"
 [[ -f dashboard_snapshot.html ]] && mv dashboard_snapshot.html "$EV/dashboard_snapshot.html"
+step "Verifier benchmark (10,000 verifications, cached key)" bench.log python -m bench.verify_bench --out "$EV/bench.json"
 
 if [[ $NETWORK == 1 ]]; then
   step "Live network checks" pytest-network.log env KYA_NETWORK=1 python -m pytest -q -m network -rs --junitxml="$EV/pytest-network.xml"
   step "Key directory survey" survey.log python -m research.survey_directories --out "$EV/directory_survey.json"
+  step "Survey of every registered signed agent" signed_agents_survey.log python -m research.survey_directories --dataset --out "$EV/signed_agents_survey.json"
+  step "Drift check of baseline surprises" drift.log python -m research.drift_check --out "$EV/drift.json"
 fi
 
 {

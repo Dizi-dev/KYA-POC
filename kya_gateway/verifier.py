@@ -3,6 +3,7 @@ unsigned, verified, invalid, unverified (draft Appendix A.1 keeps the last three
 from __future__ import annotations
 
 import base64
+import heapq
 import time
 from dataclasses import dataclass
 from enum import Enum
@@ -40,12 +41,23 @@ class NonceStore:
 
     def __init__(self):
         self._seen: dict[str, float] = {}
+        self._heap: list[tuple[float, str]] = []   # (expires, nonce), for O(log n) eviction
+
+    def __len__(self) -> int:
+        return len(self._seen)
 
     def check_and_add(self, nonce: str, expires: float, now: float) -> bool:
-        self._seen = {n: e for n, e in self._seen.items() if e >= now}
+        # Review finding E5: the old version rebuilt the whole dict on every call, so latency
+        # grew linearly with live nonces (0.2 ms -> 1 ms after 20k) and could be driven up by
+        # anyone signing valid, long-lived requests from their own directory.
+        while self._heap and self._heap[0][0] < now:
+            exp, n = heapq.heappop(self._heap)
+            if self._seen.get(n) == exp:
+                del self._seen[n]
         if nonce in self._seen:
             return False
         self._seen[nonce] = expires
+        heapq.heappush(self._heap, (expires, nonce))
         return True
 
 

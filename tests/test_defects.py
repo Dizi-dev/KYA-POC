@@ -314,3 +314,24 @@ def test_e4_directory_fetch_accepts_draft_media_type():
         assert key.keyid == d.kid
     finally:
         d.close()
+
+
+# -- E5: nonce store must not rescan every stored nonce on each request ---------------------
+
+def test_e5_nonce_store_is_not_quadratic():
+    from kya_gateway.verifier import NonceStore
+    s = NonceStore()
+    t0 = time.perf_counter()
+    for i in range(50_000):
+        assert s.check_and_add(f"n{i}", expires=10_000 + i, now=1.0 + i * 1e-6)
+    assert time.perf_counter() - t0 < 1.0, "50k live nonces should take well under a second"
+    assert not s.check_and_add("n49999", expires=99_999, now=2.0)   # replay still caught
+
+
+def test_e5_nonce_store_expires_old_entries():
+    from kya_gateway.verifier import NonceStore
+    s = NonceStore()
+    s.check_and_add("a", expires=10, now=0)
+    assert not s.check_and_add("a", expires=10, now=5)
+    assert s.check_and_add("b", expires=100, now=11)
+    assert len(s) == 1, "expired nonce must be evicted"
