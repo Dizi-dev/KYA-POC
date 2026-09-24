@@ -96,4 +96,4 @@ so the milliseconds heuristic in `keys.py` matters beyond Cloudflare's test serv
   the legacy string form. Cloudflare's live server accepts only the legacy form.
 - Whether a genuine signed request from ChatGPT, Google or AgentCore verifies end to end in
   this gateway. That needs a publicly reachable deployment and a real agent visiting it; see
-  REPORT.md next steps.
+  the next steps in ../DEVELOPERS.md.

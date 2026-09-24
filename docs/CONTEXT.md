@@ -35,6 +35,12 @@ per-agent policy (allow, block, rate-limit, charge), and keeps a tamper-evident 
 Bootstrapped, three people, no military or gambling, geography-independent. Success gate:
 1,000 paying users or 2 paying B2B clients. Demo week: one person builds a working demo in 7 days.
 
+## Where this context has been updated
+
+The market numbers in this file predate the September 2026 survey. For what was actually
+measured (96 operators publishing keys, 87 usable, every key Ed25519, and who signs today),
+see [`../research/FINDINGS.md`](../research/FINDINGS.md).
+
 ## Biggest unknown
 
 How much signed agent traffic actually reaches a small store or API today. The gateway's

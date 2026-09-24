@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-22T13:06:19+00:00",
+  "checked_at": "2026-09-24T16:29:35+00:00",
   "checks": [
     {
       "id": 1,
@@ -39,18 +39,18 @@
   "chatgpt_directory_fetch": {
     "url": "https://chatgpt.com/.well-known/http-message-signatures-directory",
     "samples_ms": [
-      120,
-      170,
-      260,
-      321,
-      402,
-      431,
-      480,
-      515,
-      600,
-      1035
+      142,
+      154,
+      226,
+      247,
+      307,
+      323,
+      416,
+      432,
+      616,
+      977
     ],
-    "median_ms": 431,
-    "max_ms": 1035
+    "median_ms": 323,
+    "max_ms": 977
   }
 }

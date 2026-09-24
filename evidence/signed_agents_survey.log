@@ -90,12 +90,12 @@ https://vagent.trustlink360.com/.well-known/http-message-signatures-directory   
 https://signature-agents.twin.so/.well-known/http-message-signatures-directory    err    - -
 https://www.urlert.com/.well-known/http-message-signatures-directory    200    1 ok
 https://visually.io/.well-known/http-message-signatures-directory     200    1 ok
-https://windowsforum.com/.well-known/http-message-signatures-directory/index.json    403    - -
+https://windowsforum.com/.well-known/http-message-signatures-directory/index.json    200    1 ok
 https://ecp.yusercontent.com/.well-known/http-message-signatures-directory    200    1 ok
 https://bot-signature.gregoryscottdev.com/.well-known/http-message-signatures-directory    200    1 ok
 https://you.com/.well-known/http-message-signatures-directory         200    1 ok
 https://app.zipchat.ai/.well-known/http-message-signatures-directory    200    1 ok
 https://fetch-bot.zvelo.io/.well-known/http-message-signatures-directory    200    1 ok
 
-87 of 96 directories load under production rules; 100 usable Ed25519 keys
+88 of 96 directories load under production rules; 101 usable Ed25519 keys
 written to evidence/signed_agents_survey.json

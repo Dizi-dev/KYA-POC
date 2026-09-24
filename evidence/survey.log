@@ -33,7 +33,7 @@ https://www.meta.com                                                  200    3 o
 https://assistbot.duckduckgo.com                                      200    1 ok
 https://you.com                                                       200    1 ok
 https://www.klaviyo.com                                               200    1 ok
-https://rye.xyz                                                       200    1 ok
+https://rye.xyz                                                       200    1 -
 https://signatures.cardsavr.io                                        200    2 ok
 https://payroll-bot.adp.com                                           200    1 ok
 https://www.browserless.io                                            200    0 ok
@@ -45,5 +45,5 @@ https://stripe.com                                                    404    - -
 https://coinbase.com                                                  302    - -
 https://www.coinbase.com  (redirect target)                           404    - -
 
-21 of 45 directories load under production rules; 28 usable Ed25519 keys
+20 of 45 directories load under production rules; 27 usable Ed25519 keys
 written to evidence/directory_survey.json

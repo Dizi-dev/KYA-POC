@@ -1,14 +1,14 @@
 {
   "n": 10000,
-  "p50_ms": 0.1706,
-  "p95_ms": 0.2006,
-  "p99_ms": 0.2492,
-  "max_ms": 0.3644,
-  "mean_ms": 0.1754,
-  "verifications_per_s_single_core": 5700,
+  "p50_ms": 0.1738,
+  "p95_ms": 0.2082,
+  "p99_ms": 0.2653,
+  "max_ms": 0.5561,
+  "mean_ms": 0.1783,
+  "verifications_per_s_single_core": 5607,
   "target": "p95 < 1 ms (ROADMAP M7)",
   "meets_target": true,
   "machine": "arm64 Darwin 25.3.0",
   "python": "3.14.7",
-  "measured_at": "2026-09-22T13:04:39Z"
+  "measured_at": "2026-09-24T16:27:39Z"
 }

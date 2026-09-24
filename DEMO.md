@@ -61,16 +61,26 @@ The demo then edits entry 5 directly in the database, to hide the forged request
 Why it matters: in a dispute ("your site charged my agent", "your agent scraped us"), the log
 is evidence that nobody quietly rewrote it.
 
-## 3. The dashboard (30 s)
+## 3. The dashboard, live (30 s)
 
 ```bash
-open evidence/dashboard_snapshot.html
+.venv/bin/python -m demo.live      # then open http://127.0.0.1:8002
 ```
 
-What appears: counts by outcome, decision and operator, plus one row per request with its
-hash. The chain status shows in red, because the demo tampered with it.
+What appears: a panel of buttons on the left, the gateway's own dashboard on the right. Each
+button fires a real request at a protected demo shop: a real agent browsing, an attacker
+replaying, a scraper claiming to be GPTBot, an unknown agent hitting the rate limit. The
+dashboard updates as you click.
+
+The button to end on is **"Tamper with the audit log"**: it edits the database directly to
+turn a block into an allow, the way someone covering their tracks would, and the gateway
+immediately reports `chain broken at entry N` in red.
+
 Why it matters: this is what a store owner pays for. Anyone can verify signatures for free;
 the policy, the log and this view are the product.
+
+(A static snapshot, `evidence/dashboard_snapshot.html`, is written by the scripted demo if
+you would rather not start a server.)
 
 ## 4. It works against the real internet (45 s)
 
@@ -94,9 +104,10 @@ this gateway loads today, including Google, AWS, Meta and DuckDuckGo
 (`evidence/signed_agents_survey.log`).
 
 **Be honest if asked:** we have not yet seen a *genuine* ChatGPT or Google request pass through
-it. That needs the shop on a public web address and a real agent visiting it (next step in
-REPORT.md).
+it. That needs the shop on a public web address and a real agent visiting it (the pilot step in
+DEVELOPERS.md).
 
 ---
-No asciinema recording: asciinema is not installed on this machine, so `evidence/demo.log`,
-written by `verify.sh`, is the recording.
+Recording it: `asciinema rec evidence/demo.cast -c ".venv/bin/python -m demo.run_demo"` if
+asciinema is installed. Otherwise `evidence/demo.log`, written by `verify.sh`, is the record
+of the run.

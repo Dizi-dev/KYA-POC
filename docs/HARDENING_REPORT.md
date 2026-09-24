@@ -1,5 +1,10 @@
 # KYA Gateway: report (22 September 2026)
 
+> **Point-in-time record, 22 September 2026** (previously `REPORT.md` at the repository root).
+> It reports the hardening pass that fixed D1, D2, D5, D9 and findings E1–E5, with the proof
+> table for every claim. Later changes are not reflected here; current state lives in
+> [`../README.md`](../README.md), [`SECURITY.md`](SECURITY.md) and [`ROADMAP.md`](ROADMAP.md).
+
 ## 1. Verdict
 
 **It works, with one production blocker.** `scripts/verify.sh --network` ends with

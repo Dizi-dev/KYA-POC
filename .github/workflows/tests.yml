@@ -1,0 +1,58 @@
+name: tests
+
+# Deterministic suites only: no public-internet calls, so a red build always means
+# our code changed behaviour. The live-ecosystem checks live in living-checks.yml.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  offline:
+    name: python ${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Cloudflare's JavaScript reference library
+        working-directory: interop/js
+        run: npm install --no-audit --no-fund
+
+      - name: Spec vectors, unit and security regressions
+        run: python -m pytest -q -m "not interop and not network" --junitxml=evidence/ci-offline.xml
+
+      - name: Interop with Cloudflare's JS and Rust implementations
+        run: python -m pytest -q -m interop --junitxml=evidence/ci-interop.xml
+
+      - name: End-to-end demo, including key rotation and tamper detection
+        run: python -m demo.run_demo --evidence evidence/ci-demo.json
+
+      - name: Verifier benchmark
+        run: python -m bench.verify_bench --n 2000 --out evidence/ci-bench.json
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-py${{ matrix.python }}
+          path: |
+            evidence/ci-*.xml
+            evidence/ci-*.json
+          retention-days: 14

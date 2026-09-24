@@ -1,0 +1,77 @@
+name: living checks
+
+# The ecosystem moves without us: operators rotate keys weekly, publish new formats, and the
+# draft spec keeps changing. This job talks to live third-party endpoints on purpose.
+#
+# A failure here is usually a FINDING, not a bug in our code. Read the uploaded evidence,
+# compare it with evidence/signed_agents_survey.json and evidence/drift.json in the repo, and
+# record what changed (see DEVELOPERS.md, "Living tests").
+on:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+jobs:
+  ecosystem:
+    name: live ecosystem checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Live endpoints (Cloudflare research server, real directories)
+        run: KYA_NETWORK=1 python -m pytest -q -m network -rs --junitxml=evidence/live-network.xml
+
+      - name: Drift check of known ecosystem surprises
+        run: python -m research.drift_check --out evidence/live-drift.json
+
+      - name: Survey the curated candidate list
+        run: python -m research.survey_directories --out evidence/live-directory_survey.json
+
+      - name: Survey every registered signing operator
+        run: python -m research.survey_directories --dataset --out evidence/live-signed_agents_survey.json
+
+      - name: Production-mode walkthrough against live ChatGPT and Google directories
+        run: python -m examples.walkthrough --evidence evidence/live-walkthrough.json
+
+      - name: Compare with the committed baseline
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          def load(p):
+              f = pathlib.Path(p)
+              return json.loads(f.read_text()) if f.exists() else None
+          old = load("evidence/signed_agents_survey.json")
+          new = load("evidence/live-signed_agents_survey.json")
+          if not (old and new):
+              print("no comparison available"); raise SystemExit(0)
+          def ok(rows):
+              return {r["origin"] for r in rows if r.get("gateway_can_load")}
+          a, b = ok(old), ok(new)
+          print(f"loadable directories: baseline {len(a)}, now {len(b)}")
+          for origin in sorted(a - b):
+              print(f"  REGRESSED (loaded before, not now): {origin}")
+          for origin in sorted(b - a):
+              print(f"  NEW (loads now, did not before):    {origin}")
+          algs = {(k.get("kty"), k.get("crv")) for r in new for k in r.get("keys", [])}
+          print("key types in the wild:", sorted(map(str, algs)))
+          if algs - {("OKP", "Ed25519")}:
+              print("  NOTE: a non-Ed25519 key appeared. We cannot verify those yet.")
+          PY
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: living-checks-${{ github.run_id }}
+          path: evidence/live-*
+          retention-days: 90

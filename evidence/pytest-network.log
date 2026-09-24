@@ -11,4 +11,4 @@ tests/test_defects.py:11
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 =========================== short test summary info ============================
 SKIPPED [1] tests/test_interop.py:116: directory only publishes the RFC 9421 test key, which production mode rejects
-4 passed, 1 skipped, 66 deselected, 2 warnings in 1.45s
+4 passed, 1 skipped, 66 deselected, 2 warnings in 2.12s

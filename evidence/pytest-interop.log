@@ -9,4 +9,4 @@ tests/test_defects.py:11
     _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-15 passed, 56 deselected, 2 warnings in 0.96s
+15 passed, 56 deselected, 2 warnings in 1.09s
