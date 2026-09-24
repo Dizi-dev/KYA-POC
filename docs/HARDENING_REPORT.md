@@ -73,7 +73,7 @@ after the fixes (dfdd059) and at the end, not after every single commit.
 
 ## 4. Research findings
 
-Details in [research/FINDINGS.md](research/FINDINGS.md); sources in [research/candidates.md](research/candidates.md).
+Details in [../research/FINDINGS.md](../research/FINDINGS.md); sources in [../research/candidates.md](../research/candidates.md).
 
 - **R1:** Google publishes at `https://agent.bot.goog` (5 keys) and AWS AgentCore at one
   `*.keydirectory.signer.<region>.on.aws` host per region. Both load. The Cloudflare Radar
